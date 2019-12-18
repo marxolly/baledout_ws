@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>3PL Plus Warehouse Management System: Login</title>
+    <title>Baledout Web Application: Login</title>
 
 	<!-- Icons -->
         <link rel="shortcut icon" href="/images/icons/favicon.ico?v=5" type="image/x-icon">
@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="/styles/wms-style.css">
         <link rel="stylesheet" href="/styles/website.css">
 		<style>
-			body{ background: #000 ; }
+			body{ background: #043689 ; }
 		</style>
 
 </head>
