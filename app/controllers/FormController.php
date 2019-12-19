@@ -327,7 +327,6 @@ class FormController extends Controller {
         {
             Form::setError("general","Your IP Address has been blocked");
         }
-        die('IP Check');
         if(!$this->dataSubbed($email))
         {
             Form::setError('email', 'Please enter your email address');
@@ -349,6 +348,7 @@ class FormController extends Controller {
             $user = $this->user->getUserByEmail($email);
             $userId = isset($user["id"])? $user["id"]: null;
         }
+        die('user checks');
         if(!$this->dataSubbed($password))
         {
             Form::setError('password', 'Please enter your password');
