@@ -317,7 +317,7 @@ class FormController extends Controller {
 
     public function procLogin()
     {
-        echo "<pre>",print_r($this->request),"</pre>";die();
+        //echo "<pre>",print_r($this->request),"</pre>";die();
         $email      = $this->request->data('email');
         $password   = $this->request->data('password');
         $userIp     = $this->request->clientIp();
@@ -367,17 +367,16 @@ class FormController extends Controller {
 		}
         else
         {
-            //echo "<pre>",print_r($this->request),"</pre>";
-            // reset session
-            Session::reset([
+            $reset_array = array(
                 "user_id"       => $userId,
-                "role"          => $this->user->getUserRoleName($user["role_id"]),
                 "ip"            => $userIp,
                 "user_agent"    => $userAgent,
                 "users_name"    => $user['name'],
-                "client_id"     => $user['client_id'],
                 "is_admin_user" => $this->user->isAdminUser($userId)
-            ]);
+            );
+            //echo "<pre>",print_r($reset_array),"</pre>";die();
+            // reset session
+            Session::reset($reset_array);
             //set the cookie to remember the user
             Cookie::reset($userId);
 
