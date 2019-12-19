@@ -372,9 +372,10 @@ class FormController extends Controller {
                 "ip"            => $userIp,
                 "user_agent"    => $userAgent,
                 "users_name"    => $user['name'],
-                "is_admin_user" => $this->user->isAdminUser($userId)
+                "is_admin_user" => $this->user->isAdminUser($userId),
+                "role"          => $this->user->getUserRoleName($user["role_id"]),
             );
-            //echo "<pre>",print_r($reset_array),"</pre>";die();
+            echo "<pre>",print_r($reset_array),"</pre>";die();
             // reset session
             Session::reset($reset_array);
             //set the cookie to remember the user
@@ -383,6 +384,7 @@ class FormController extends Controller {
             $this->login->resetFailedLogins($email);
             $this->login->resetPasswordToken($userId);
             $redirect = ltrim($redirect, "/");
+            die('redirect');
             return $this->redirector->root($redirect);
         }
     }
