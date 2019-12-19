@@ -317,7 +317,7 @@ class FormController extends Controller {
 
     public function procLogin()
     {
-        //echo "<pre>",print_r($this->request),"</pre>";die();
+        echo "<pre>",print_r($this->request),"</pre>";die();
         $email      = $this->request->data('email');
         $password   = $this->request->data('password');
         $userIp     = $this->request->clientIp();
@@ -348,7 +348,6 @@ class FormController extends Controller {
             $user = $this->user->getUserByEmail($email);
             $userId = isset($user["id"])? $user["id"]: null;
         }
-        die('user checks');
         if(!$this->dataSubbed($password))
         {
             Form::setError('password', 'Please enter your password');
