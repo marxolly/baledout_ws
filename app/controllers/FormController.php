@@ -323,11 +323,11 @@ class FormController extends Controller {
         $userIp     = $this->request->clientIp();
         $redirect   = $this->request->data("redirect");
         $userAgent  = $this->request->userAgent();
-        die('variables set');
         if($this->login->isIpBlocked($userIp))
         {
             Form::setError("general","Your IP Address has been blocked");
         }
+        die('IP Check');
         if(!$this->dataSubbed($email))
         {
             Form::setError('email', 'Please enter your email address');
