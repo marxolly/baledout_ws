@@ -33,20 +33,6 @@ class FormController extends Controller {
              ]);
         }
 
-
-        $this->loadEparcelLocations([
-            'BigBottle',
-            'Freedom',
-            'Nuchev'
-        ]);
-
-        $this->loadHuntersLocations([
-            '3KG',
-            'PLU',
-            'PAL',
-            'Test'
-        ]);
-
     }
 
     public function beforeAction(){
@@ -4418,7 +4404,7 @@ class FormController extends Controller {
 
     public function procLogin()
     {
-        //echo "<pre>",print_r($this->request),"</pre>";die();
+        echo "<pre>",print_r($this->request),"</pre>";die();
         $email      = $this->request->data('email');
         $password   = $this->request->data('password');
         $userIp     = $this->request->clientIp();
