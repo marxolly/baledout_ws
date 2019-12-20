@@ -25,9 +25,6 @@ class DashboardController extends Controller
             'client_id'             =>  $client_id,
             'orders'                =>  $orders,
             'clients'               =>  $clients,
-            'solar_service_jobs'    =>  $solar_service_jobs,
-            'store_orders'          =>  $store_orders,
-            'solar_orders'          =>  $solar_installs,
             'user_role'             =>  $user_role
         ]);
     }
