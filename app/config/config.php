@@ -85,7 +85,7 @@ return array(
     /*************************************************************************
     * Baledout Address
     **************************************************************************/
-    "THREEPL_ADDRESS" => array(
+    "BALEDOUT_ADDRESS" => array(
       	'address'	=>	'',
 		'address_2'	=>	'',
 		'suburb'	=>	'',
@@ -99,7 +99,6 @@ return array(
     **************************************************************************/
     "MENU_ICONS"    =>  array(
         'orders'            =>  'fas fa-truck',
-        'ordering'          =>  'fas fa-cash-register',
 		'clients'	        =>	'fas fa-user-tie',
 		'products'	        =>	'fas fa-dolly',
 		'inventory'	        =>	'fas fa-tasks',
@@ -114,8 +113,7 @@ return array(
         'downloads'         =>  'fas fa-download',
         'financials'        =>  'fas fa-file-invoice-dollar',
         'admin-only'        =>  'fas fa-lock',
-        'scheduling'        =>  'far fa-calendar-alt',
-        'solar-jobs'        =>  'fas fa-tools'
+        'scheduling'        =>  'far fa-calendar-alt', 
     ),
     "ADMIN_PAGES"   =>  array(
         'orders' => array(
@@ -123,164 +121,33 @@ return array(
             'order-update'			    => false,
 			'process-backorders'	    =>	false,
 			'order-summaries'		    =>	true,
-            //'add-b2B-order'             =>  true,
             'edit-address'              =>  false,
             'order-edit'                =>  false,
             'edit-customer'             =>  false,
             'order-search'              =>  true,
             'order-search-results'      =>  false,
-            'order-picking'             =>  true,
             'order-details'             =>  false,
-            'order-packing'             =>  true,
             'order-dispatching'         =>  true,
-            'truck-usage'               =>  true,
             'view-orders'               =>  true,
             'address-update'            =>  false,
             'items-update'              =>  false,
             'order-importing'           =>  true,
-            'view-storeorders'          => true,
-            'view-pickups'              => false,
-            'record-pickup'   => true,
-            'order-csv-upload'  => true,
-            'manage-swatches'   => true,
-            'add-serials'   => true
-        ),
-        'solar-jobs'  => array(
-            'add-solar-install'             => true,
-            'add-solar-install-new'             => false,
-            'update-solar-job'          => false,
-            'add-service-job'           => true,
-            'view-installs'                 => true,
-            'add-origin-job'            => false,
-            'add-tlj-job'               => false,
-            'add-solargain-job'               => false,
-            'job-search'                => true,
-            'edit-servicejob'           => false,
-            'update-service-details'    => false,
-            'view-service-jobs'         => true,
-            'update-install-details'    => false,
-            'install-items-update'      => false
         ),
 		'clients'	=> array(
 			'view-clients'	=> true,
 			'add-client'	=> true,
 			'edit-client'	=> false,
 		),
-		'products'	=> array(
-			'view-products'			=> true,
-			'add-product'			=> true,
-			'edit-product'			=> false,
-			//'bulk-product-upload'	=>	true,
-            'pack-items-edit'       =>  true,
-            'collections-edit'      =>  true,
-            'product-search'        =>  true,
-		),
-        'inventory'   =>  array(
-            'view-inventory'		=>	true,
-            'pack-items-manage'     =>  true,
-            //'product-to-location'   =>  true,
-            'scan-to-inventory'     =>  true,
-            //'client-locations'      =>  true,
-            'product-movement'      =>  false,
-            //'location-scanner'      =>  true,
-            //'returns-input'         =>  true,
-            'goods-out'             =>  true,
-            'goods-in'               =>  true,
-            'add-subtract-stock'    =>  false,
-            'quality-control'       =>  false,
-            //'replenish-pickface'    => true,
-            'transfer-location' => true,
-            'solar-returns' => true,
-            'move-bulk-items'   => true
-        ),
 		'reports'			=> array(
-          	//'product-movement-summary'	=>	true,
-            //'product-by-location'   =>  true,
-			'stock-movement-report'	=>	true,
-			//'user-activity-report'		=>	true,
-			//'client-activity-report'	=>	true,
-			'dispatch-report'			=>	true,
-			//'backorder-report'		=>	true,
-			'inventory-report'			=>	true,
-            'location-report'           =>  true,
-			//'audit-log'				=>	true,
-            'client-space-usage-report'   =>  true,
-            //'hunters-check'             =>  true,
-            //'client-daily-reports'      =>  true,
-            'goods-out-report'          =>  true,
-            'goods-out-summary'         =>  true,
-            'goods-in-report'          =>  true,
-            'goods-in-summary'         =>  true,
-            //'staff-time-report'        =>  true,
-            //'staff-time-sheets'         =>  true,
-            //'eparcel-check'             =>  true,
-            'stock-at-date'             =>  true,
-            //'returns-report'             =>  true,
-            //'empty-bay-report'           =>  true,
-            //'pick-error-report'         =>  true,
-            'unloaded-containers-report'       =>  true,
-            'truck-run-sheet'       =>  true,
-            '3pl-dispatch-report'   =>  false,
-            '3pl-stock-movement-report' =>  false,
-            'empty-bay-report'      => true,
-            //'client-daily-reports'  => true,
-            'pickups-report'    => true,
-            'solar-returns-report'    => true,
-            'solar-consumables-reorder' => true,
-            'swatches-report'       => true,
-            'order-serial-numbers-report'   => true,
-            '3pl-order-serials-report'  => false
-		),/*
-        'sales-reps'        =>  array(
-            'view-reps'                 =>  true,
-            'add-sales-rep'             =>  true,
-            'edit-sales-rep'            =>  false,
-            'ship-to-reps'              =>  true
-        ),*/
-        'solar-teams'   =>array(
-            'add-team'  => true,
-            'edit-team' => false,
-            'view-teams'    => true
-        ),/*
-        'stores'        =>  array(
-            'view-stores'           =>  true,
-            'add-store'             =>  true,
-            'edit-store'            =>  false
-        ),*/
-        /*
+
+		),
         'staff'             => array(
-            'time-sheets'   =>  true,
-            'client-time-usage'  =>  true,
-            'close-staff-task'  =>  false
         ),
-        */
         'data-entry'    =>  array(
-            'container-unloading'      => true,
-            'error-data'                =>  true,
-            'incoming-shipments'        =>  true
         ),
 		'site-settings'		=> array(
-			'order-status'				=> 	true,
-			'stock-movement-reasons'	=> 	true,
-            'locations'                 =>  true,
-            'staff'                     =>  true,
-            'manage-users'	            =>	true,
-            'packing-types'             =>  true,
-            //'store-chains'              =>  true,
-            'user-roles'                =>  true,
-            //'pickfaces'                 => true,
-            'couriers'                  => true,
-            'solar-order-types'   => true,
-            'edit-user-profile'     => false
 		),
         'financials'    =>  array(
-            //'hunters-check' => true,
-            'directfreight-check'   => true
-        ),
-        'downloads' => array(
-            'super_admin_only'  => true,
-            'print-location-barcodes'   => true,
-            'useful-barcodes'   => true
         ),
         'admin-only'    => array(
             'super_admin_only'  => true,
