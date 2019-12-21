@@ -9,12 +9,12 @@ $panel_classes = array(
 $c = 1;
 ?>
 <div id="page-wrapper">
-    <?php echo $user_role; die();?>
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Baledout Web Portal</h1>
         </div>
     </div>
+     <?php echo //$user_role; die();?> 
     <?php if($user_role == "admin"):?>
         <input type="hidden" id="admin_from_value" value="<?php echo strtotime('last friday', strtotime('-3 months'));?>" />
         <input type="hidden" id="admin_to_value" value="<?php echo strtotime('last friday', strtotime('tomorrow'));?>" />
