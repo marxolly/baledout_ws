@@ -10,8 +10,8 @@
     <title>Baledout Web Application</title>
 
     <!-- Icons -->
-        <link rel="shortcut icon" href="/images/icons/favicon.ico?v=5" type="image/x-icon">
-        <link rel="icon" href="/images/icons/favicon.ico?v=5" type="image/x-icon">
+        <link rel="shortcut icon" href="/images/icons/favicon.ico?v=3" type="image/x-icon">
+        <link rel="icon" href="/images/icons/favicon.ico?v=53 type="image/x-icon">
     <!-- END Icons -->
 
 
