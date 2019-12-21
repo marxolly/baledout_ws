@@ -20,6 +20,6 @@
         "fpdf/fpdf": "^1.81"
     },
     "autoload": {
-    	"psr-4": { "": ["app/core/", "app/models/", "app/utility/", "app/packaging/", "app/controllers/", "app/core/components/", "app/core/eparcel_accounts/", "app/core/hunters_accounts/"] }
+    	"psr-4": { "": ["app/core/", "app/models/", "app/utility/", "app/packaging/", "app/controllers/", "app/core/components/"] }
     }
 }
