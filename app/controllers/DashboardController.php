@@ -15,7 +15,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        die('index controller');
+        //die('index controller');
         $orders = array();
         $client_id = 0;
         $clients = array();

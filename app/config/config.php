@@ -117,54 +117,6 @@ return array(
         'scheduling'        =>  'far fa-calendar-alt',
         'solar-jobs'        =>  'fas fa-tools'
     ),
-    "SOLAR_ADMIN_PAGES" => array(
-        'solar-jobs'  => array(
-            'add-solar-install'             => true,
-            'update-solar-job'          => false,
-            'add-service-job'           => true,
-            'view-installs'                 => true,
-            'job-search'                => true,
-            'edit-servicejob'           => false,
-            'update-service-details'    => false,
-            'view-service-jobs'         => true,
-            'update-install-details'    => false,
-            'install-items-update'      => false
-        ),
-        'products'	=> array(
-            'view-products'			=> true,
-            'add-product'			=> true,
-            'edit-product'			=> false,
-        ),
-        'inventory' => array(
-            'view-inventory'    => true,
-            'view-solar-inventory'  => false
-        ),
-        'solar-teams'   => array(
-            'add-team'  => true,
-            'edit-team' => false,
-            'view-teams'    => true
-        ),
-        'scheduling'    => array(
-            'view-schedule' => true
-        ),
-        'reports'   => array(
-            'jobs-report'       => true,
-            'solar-returns-report'    => true,
-            'solar-consumables-reorder' => true
-        ),
-    ),
-    "SOLAR_PAGES"   => array(
-        'solar-jobs'  => array(
-            'view-installs'                 => true,
-            'view-service-jobs'         => true
-        ),
-        'ordering'  => array(
-            'order-consumables' => true
-        ),
-        'scheduling'    => array(
-            'view-schedule' => true
-        ),
-    ),
     "ADMIN_PAGES"   =>  array(
         'orders' => array(
             'add-order' =>  true,
@@ -336,66 +288,7 @@ return array(
             'dispatched-orders-updater' => false,
             'client-bay-fixer'  => true
         ),
-    ),
-    'WAREHOUSE_PAGES' => array(
-        'orders'      => array(
-            'order-picking'     =>  true,
-            'order-packing'     =>  true,
-            'order-dispatching'         =>  true,
-            'view-orders'               =>  true,
-            'order-search'              =>  true,
-            'order-search-results'      =>  false,
-        ),
-        'products'    =>  array(
-            'view-products'			=> true,
-            'add-product'           =>  true,
-            'edit-product'			=> false,
-             'product-search'        =>  true,
-
-        ),
-        'inventory'     =>  array(
-            'view-inventory'		=>	true,
-            'product-to-location'   =>  true,
-            'scan-to-inventory'     =>  true,
-            //'client-locations'      =>  true,
-            'product-movement'      =>  false,
-            'goods-out'             =>  true,
-            'goods-in'               =>  true,
-            'add-subtract-stock'    =>  false,
-            'quality-control'       =>  false,
-            'pack-items-manage'     =>  true,
-            //'replenish-pickface'    => true
-        ),
-        'staff'   =>  array(
-            'time-sheets'   =>  true,
-            'client-time-usage'  =>  true
-        )
-    ),
-    'CLIENT_PAGES' => array(
-        'orders'			=>	array(
-			'client-orders'		=>	true,
-			'order-detail'	    =>	false,
-			'order-tracking'	=>	false,
-            'add-order'         =>  true,
-            'bulk-upload-orders'     =>  true,
-            //'book-pickup'       => true,
-            //'add-origin-order'  => true
-		),
-		'inventory'			=>	array(
-			'client-inventory'	=>	true,
-            'expected-shipments'    =>  true,
-            'register-new-stock'    => true
-		),
-        'reports'           =>  array(
-            'dispatch-report'   =>  true,
-            'stock-at-date'             =>  true ,
-            'returns-report'             =>  true,
-            'stock-movement-report'     =>  true,
-            'stock-movement-summary'    =>  true,
-            'client-dispatch-report'    =>  false,
-            'client-stock-movement-report'  =>  false
-        )
-    ),
+    )
     /**
     * Order status
     *

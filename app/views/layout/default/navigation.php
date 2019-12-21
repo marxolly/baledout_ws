@@ -1,7 +1,7 @@
 <?php
 $icons = Config::get("MENU_ICONS");
 if(Session::getIsLoggedIn()):
-    //echo "<pre>",print_r($_SESSION),"</pre>";
+    echo "<pre>",print_r($_SESSION),"</pre>";die();
     $user_role = (Session::isAdminUser())? 'admin' : Session::getUserRole();
     if(empty($user_role))
         //return $this->controller->redirector->login();
