@@ -1,13 +1,13 @@
 <?php
 $icons = Config::get("MENU_ICONS");
 if(Session::getIsLoggedIn()):
-    echo "<pre>",print_r($_SESSION),"</pre>";die();
+    //echo "<pre>",print_r($_SESSION),"</pre>";die();
     $user_role = (Session::isAdminUser())? 'admin' : Session::getUserRole();
     if(empty($user_role))
         //return $this->controller->redirector->login();
         return;
     $user_role = str_replace(" ","_", $user_role);
-    //echo strtoupper($user_role."_PAGES");
+    echo strtoupper($user_role."_PAGES");die();
     $pages = Config::get(strtoupper($user_role."_PAGES"));
     $user_info = $this->controller->user->getProfileInfo(Session::getUserId());
     $image = $user_info['image'];
