@@ -127,7 +127,7 @@ class App {
      */
      private function invoke($controller, $method = "index", $args = [])
      {
-        die("will invoke ".$controller.": ".$method);
+        //die("will invoke ".$controller.": ".$method);
         $this->request->addParams(['controller' => $controller, 'action' => $method, 'args' => $args]);
          $this->controller = new $controller($this->request, $this->response);
 
