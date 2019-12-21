@@ -9,7 +9,7 @@ $panel_classes = array(
 $c = 1;
 ?>
 <div id="page-wrapper">
-    <?php echo $user_role; die();?>
+    <?php //echo $user_role; die();?>
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Baledout Web Portal</h1>
