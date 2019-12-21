@@ -3,7 +3,7 @@
     "authors": [
         {
             "name": "Mark Solly",
-            "email": "mark.solly@3plplus.com.au",
+            "email": "mark@baledout.com.au",
             "role": "Developer"
         }
     ],
@@ -20,6 +20,6 @@
         "fpdf/fpdf": "^1.81"
     },
     "autoload": {
-    	"psr-4": { "": ["app/core/", "app/models/", "app/utility/", "app/packaging/", "app/controllers/", "app/core/components/"] }
+    	"psr-4": { "": ["app/core/", "app/models/", "app/utility/","app/controllers/", "app/core/components/"] }
     }
 }
