@@ -9,7 +9,7 @@ if(Session::getIsLoggedIn()):
     $user_role = str_replace(" ","_", $user_role);
     //echo strtoupper($user_role."_PAGES");die();
     $pages = Config::get(strtoupper($user_role."_PAGES"));
-    //echo "<pre>",print_r($pages),"</pre>";die(); 
+    //echo "<pre>",print_r($pages),"</pre>";die();
     $user_info = $this->controller->user->getProfileInfo(Session::getUserId());
     $image = $user_info['image'];
 else:
@@ -54,7 +54,7 @@ endif;
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
 						<li id="logo" class="text-center">
-                            <img src="/images/backgrounds/3pl_logo.png" />
+                            <img src="/images/backgrounds/baledout_logo.png" />
                         </li>
                         <li id="dashboard">
                             <a href="/dashboard"><i class="fa fas fa-home fa-fw"></i> Home</a>
