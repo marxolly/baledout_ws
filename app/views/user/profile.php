@@ -60,8 +60,7 @@ $name = (empty(Form::value('name')))? $info['name'] : Form::value('name');
                 </div>
             </div>
             <!-- Hidden Inputs -->
-            <input type="hidden" name="csrf_token" id="csrf_token" value="<?php echo Session::generateCsrfToken(); ?>" />
-            <input type="hidden" name="client_id" value="<?php echo $info['client_id'];?>" />
+            <input type="hidden" name="csrf_token" id="csrf_token" value="<?php echo Session::generateCsrfToken(); ?>" /> 
             <input type="hidden" name="role_id" value="<?php echo $info['role_id'];?>" />
             <!-- Hidden Inputs -->
             <div class="form-group row">
