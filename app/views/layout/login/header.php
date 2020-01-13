@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link href="/styles/dataTables.bootstrap.css" rel="stylesheet">
         <link href="/styles/dataTables.responsive.css" rel="stylesheet">
-        <link rel="stylesheet" href="/styles/wms-style.css">
+        <link rel="stylesheet" href="/styles/baledout-style.css">
         <link rel="stylesheet" href="/styles/website.css">
 		<style>
 			body{ background: #043689 ; }
