@@ -28,6 +28,7 @@ class UserController extends Controller{
     }
 
     public function profile(){
+        die('user/profile');
         //data
         $info = $this->user->getProfileInfo(Session::getUserId());
 
