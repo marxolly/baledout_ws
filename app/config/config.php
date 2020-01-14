@@ -142,43 +142,38 @@ return array(
 			'view-products'			=> true,
 			'add-product'			=> true,
 			'edit-product'			=> false,
-			//'bulk-product-upload'	=>	true,
-            'pack-items-edit'       =>  true,
             'collections-edit'      =>  true,
             'product-search'        =>  true,
 		),
         'inventory'   =>  array(
             'view-inventory'		=>	true,
-            'pack-items-manage'     =>  true,
-            //'product-to-location'   =>  true,
             'scan-to-inventory'     =>  true,
-            //'client-locations'      =>  true,
             'product-movement'      =>  false,
-            //'location-scanner'      =>  true,
-            //'returns-input'         =>  true, 
             'add-subtract-stock'    =>  false,
             'quality-control'       =>  false,
-            //'replenish-pickface'    => true,
             'transfer-location' => true,
             'solar-returns' => true,
             'move-bulk-items'   => true
         ),
 		'reports'			=> array(
-
 		),
         'staff'             => array(
         ),
         'data-entry'    =>  array(
         ),
 		'site-settings'		=> array(
+            'order-status'				=> 	true,
+			'stock-movement-reasons'	=> 	true,
+            'locations'                 =>  true,
+            'staff'                     =>  true,
+            'manage-users'	            =>	true,
+            'user-roles'                =>  true,
+            'couriers'                  => true,
+            'edit-user-profile'         => false
 		),
         'financials'    =>  array(
         ),
         'admin-only'    => array(
-            'super_admin_only'  => true,
-            'eparcel-shipment-deleter'  => true,
-            'dispatched-orders-updater' => false,
-            'client-bay-fixer'  => true
         ),
     )
     /**
