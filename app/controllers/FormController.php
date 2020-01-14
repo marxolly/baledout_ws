@@ -175,7 +175,6 @@ class FormController extends Controller {
                 "ip"            => $this->request->clientIp(),
                 "user_agent"    => $this->request->userAgent(),
                 "users_name"    => $name,
-                "client_id"     => $client_id,
                 "is_admin_user" => $this->user->isAdminUser()
             ]);
             //set the cookie to remember the user
