@@ -138,6 +138,31 @@ return array(
 			'add-client'	=> true,
 			'edit-client'	=> false,
 		),
+        'products'	=> array(
+			'view-products'			=> true,
+			'add-product'			=> true,
+			'edit-product'			=> false,
+			//'bulk-product-upload'	=>	true,
+            'pack-items-edit'       =>  true,
+            'collections-edit'      =>  true,
+            'product-search'        =>  true,
+		),
+        'inventory'   =>  array(
+            'view-inventory'		=>	true,
+            'pack-items-manage'     =>  true,
+            //'product-to-location'   =>  true,
+            'scan-to-inventory'     =>  true,
+            //'client-locations'      =>  true,
+            'product-movement'      =>  false,
+            //'location-scanner'      =>  true,
+            //'returns-input'         =>  true, 
+            'add-subtract-stock'    =>  false,
+            'quality-control'       =>  false,
+            //'replenish-pickface'    => true,
+            'transfer-location' => true,
+            'solar-returns' => true,
+            'move-bulk-items'   => true
+        ),
 		'reports'			=> array(
 
 		),
