@@ -62,17 +62,17 @@ class App {
 
     public function run()
     {
-        // split the requested URL
-        $this->splitUrl();
         /*Ya gotta be logged in  */
         if(Session::getIsLoggedIn() === false && !Cookie::isCookieValid())
         {
-            //die('will invoke login');
+            die('will invoke login');
             //return $this->invoke("LoginController", 'index', $this->args);
             //return $this->toLogin();
             //return;
             //return $this->redirector->login();
         }
+        // split the requested URL
+        $this->splitUrl();
         if(!self::isControllerValid($this->controller))
         {
             return $this->notFound();

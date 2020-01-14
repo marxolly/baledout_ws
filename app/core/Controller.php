@@ -92,7 +92,7 @@ class Controller {
      *
      */
      public function initialize(){
-
+        
          $this->loadComponents([
              'Auth' => [
                      'authenticate' => ['User'],
