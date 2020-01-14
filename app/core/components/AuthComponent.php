@@ -194,14 +194,12 @@ class AuthComponent extends Component{
             $role_id = $this->controller->user->getProfileInfo(Cookie::getUserId())["role_id"];
             $role = $this->controller->user->getUserRoleName($role_id);
             $users_name = $this->controller->user->getProfileInfo(Cookie::getUserId())["name"];
-            $client_id = $this->controller->user->getProfileInfo(Cookie::getUserId())["client_id"];
             Session::reset([
                 "user_id"       => Cookie::getUserId(),
                 "role"          => $role,
                 "ip"            => $this->request->clientIp(),
                 "user_agent"    => $this->request->userAgent(),
-                'users_name'    => $users_name,
-                'client_id'     => $client_id,
+                'users_name'    => $users_name, 
                 "is_admin_user" => $this->controller->user->isAdminUser(Cookie::getUserId())
             ]);
 
