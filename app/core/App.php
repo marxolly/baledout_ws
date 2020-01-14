@@ -65,7 +65,7 @@ class App {
         /*Ya gotta be logged in  */
         if(Session::getIsLoggedIn() === false && !Cookie::isCookieValid())
         {
-            die('will invoke login');
+            //die('will invoke login');
             //return $this->invoke("LoginController", 'index', $this->args);
             //return $this->toLogin();
             //return;
