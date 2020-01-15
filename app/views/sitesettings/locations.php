@@ -37,6 +37,7 @@
             </div>
         </form>
     </div>
+    <?php if(count($locations)):?>
     <div id="waiting" class="row">
         <div class="col-lg-12 text-center">
             <h2>Drawing Table..</h2>
@@ -44,7 +45,6 @@
             <img class='loading' src='/images/preloader.gif' alt='loading...' />
         </div>
     </div>
-    <?php if(count($locations)):?>
     <div id="table_holder" style="display:none">
         <div class="row" id="tablefeedback" style="display: none"></div>
             <div class="row">
@@ -80,11 +80,11 @@
                                 </tr>
                             <?php endforeach;?>
                         </tbody>
-
                     </table>
                 </div>
             </div>
         </div>
+    </div>
     <?php else:?>
         <div class="col-lg-12">
             <div class="errorbox">
