@@ -148,16 +148,13 @@ class sitesettingsController extends Controller
         // only for super admins
         Permission::allow('super admin', $resource, ['*']);
         // all other admins
-        Permission::allow(['admin', 'md admin'], $resource, [
-            'addSalesRep',
-            'editSalesRep',
+        Permission::allow(['admin'], $resource, [
             'locations',
             'manageUsers',
             'orderStatus',
             'packingType',
             'staff',
-            'stockMovementReasons',
-            'storeChains'
+            'stockMovementReasons'
         ]);
 
         //echo "<pre>",print_r(Permission::$perms),"</pre>"; die();
