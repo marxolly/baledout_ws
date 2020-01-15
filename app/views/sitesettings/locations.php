@@ -28,15 +28,6 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="form-check">
-                    <label class="form-check-label col-md-3" for="trays">Tray Location</label>
-                    <div class="col-md-4 checkbox checkbox-default">
-                        <input class="form-check-input styled" type="checkbox" id="trays" name="trays" />
-                        <label for="trays"></label>
-                    </div>
-                </div>
-            </div>
             <input type="hidden" name="csrf_token" value="<?php echo Session::generateCsrfToken(); ?>" />
             <div class="form-group row">
                 <label class="col-md-3 col-form-label">&nbsp;</label>
@@ -53,9 +44,9 @@
             <img class='loading' src='/images/preloader.gif' alt='loading...' />
         </div>
     </div>
+    <?php if(count($locations)):?>
     <div id="table_holder" style="display:none">
         <div class="row" id="tablefeedback" style="display: none"></div>
-        <?php if(count($locations)):?>
             <div class="row">
                 <div class="col-lg-12">
                     <table width="100%" class="table-striped table-hover" id="view_locations_table">
@@ -64,7 +55,6 @@
                                 <th>Location</th>
                                 <th>Edit</th>
                                 <th>Multi SKU</th>
-                                <th>Trays</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -82,12 +72,6 @@
                                             <label for="multisku_<?php echo $l['id'];?>"></label>
                                         </div>
                                     </td>
-                                    <td data-label="Trays">
-                                        <div class="checkbox checkbox-default">
-                                            <input class="form-check-input styled" type="checkbox" id="trays_<?php echo $l['id'];?>" name="trays_<?php echo $l['id'];?>" <?php if($l['tray'] > 0) echo "checked";?> />
-                                            <label for="trays_<?php echo $l['id'];?>"></label>
-                                        </div>
-                                    </td>
                                     <td>
                                         <p>
                                             <a class="btn btn-primary update" data-locationid="<?php echo $l['id'];?>">Update Details</a><span class="label label-success" id="updated_<?php echo $l['id'];?>"></span>
@@ -100,12 +84,12 @@
                     </table>
                 </div>
             </div>
-        <?php else:?>
-            <div class="col-lg-12">
-                <div class="errorbox">
-                    <p>No locations listed yet</p>
-                </div>
+        </div>
+    <?php else:?>
+        <div class="col-lg-12">
+            <div class="errorbox">
+                <p>No locations listed yet</p>
             </div>
-        <?php endif;?>
-    </div>
+        </div>
+    <?php endif;?>
 </div>
