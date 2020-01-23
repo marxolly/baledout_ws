@@ -271,6 +271,11 @@ class User extends Model{
     {
         $db = Database::openConnection();
         print_r($role_ranks);die();
+        $db->updateDatabaseField('user_roles', 'ranking', $rank, $id);
+        foreach($role_ranks as $rank => $id)
+        {
+            $db->updateDatabaseField('user_roles', 'ranking', $rank, $id);
+        }
     }
 
     public function canManageRole($role_id)
