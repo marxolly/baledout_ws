@@ -62,8 +62,8 @@ class ajaxfunctionsController extends Controller
     {
         //echo "<pre>",print_r($this->request),"</pre>"; die();
         $data = array(
-            'error'     =>  true,
-            'feedback'  =>  'testing the error'
+            'error'     =>  false,
+            'feedback'  =>  ''
         );
         $this->view->renderJson($data);
     }

@@ -267,6 +267,12 @@ class User extends Model{
         return $valid;
     }
 
+    public function UpdateRoleHeirarchy($role_ranks)
+    {
+        $db = Database::openConnection();
+        print_r($role_ranks);die();
+    }
+
     public function canManageRole($role_id)
     {
         $db = Database::openConnection();
