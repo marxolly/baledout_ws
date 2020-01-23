@@ -129,7 +129,7 @@
                                 var data = $(this).sortable('serialize');
                                 var url = "/ajax-functions/update-role-rankings";
                                 //$('span#text').text(data+" "+url);
-                                .blockUI({ message: '<div style="height:140px; padding-top:20px;"><h2>Updating Heirarchy...</h2></div>' });
+                                $.blockUI({ message: '<div style="height:140px; padding-top:20px;"><h2>Updating Heirarchy...</h2></div>' });
                                 $.post(url, data, function(d){
                                     $.unblockUI();
                                 });
