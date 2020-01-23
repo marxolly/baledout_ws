@@ -140,6 +140,14 @@
                                             icon: "error"
                                         });
                                     }
+                                    else
+                                    {
+                                        swal({
+                                            title: 'Heirarchy Updated',
+                                            text: d.feedback,
+                                            icon: "success"
+                                        });
+                                    }
                                 });
                             }
                         });
