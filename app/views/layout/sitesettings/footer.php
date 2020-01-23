@@ -128,7 +128,10 @@
                             stop: function(event, ui){
                                 var data = $(this).sortable('serialize');
                                 var url = "/ajax-functions/update-role-rankings";
-                                $('span#text').text(data+" "+url);
+                                //$('span#text').text(data+" "+url);
+                                $.post(url, data, function(d){
+
+                                });
                             }
                         });
                         $('form#add-userrole, form.edit-userrole').submit(function(){
