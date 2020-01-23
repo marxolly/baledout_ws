@@ -20,7 +20,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-10 text-center">
-                                <h2><?php echo $name;die();?> Users</h2>
+                                <h2><?php echo $name;continue;?> Users</h2>
                             </div>
                             <div class="col-xs-2 text-right">
                                  <a class="toggle_roles" data-toggle="collapse" href="#role_<?php echo $ur['id'];?>"><span class="fa arrow huge"></span></a>
