@@ -36,7 +36,7 @@
     <?php if(count($roles)):?>
         <div class="row" id="sortable">
             <?php foreach($roles as $r):?>
-                <form class="edit-userrole" action="/form/procUserRoleEdit" method="post">
+                <form class="edit-userrole" id="role_<?php echo $r['id'];?>"action="/form/procUserRoleEdit" method="post">
                     <div class="form-group row">
                         <div class="col-md-3">
                             <label class="col-form-label">Name</label>
