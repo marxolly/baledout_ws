@@ -51,10 +51,16 @@ class ajaxfunctionsController extends Controller
             'updateFreightCharge',
             'updateLocation',
             'updateOrderComments',
+            'updateRoleRankings',
             'updateWarningLevel'
         ];
         $this->Security->config("validateForm", false);
         $this->Security->requireAjax($actions);
+    }
+
+    public function updateRoleRankings()
+    {
+        echo "<pre>",print_r($this->request),"</pre>"; die();
     }
 
     public function bulkMoveStock()
