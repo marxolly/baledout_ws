@@ -127,7 +127,8 @@
                             placeholder:"ui-state-highlight",
                             stop: function(event, ui){
                                 var data = $(this).sortable('serialize');
-                                $('span#text').text(data);    
+                                var url = "/ajax-functions/update-role-rankings";
+                                $('span#text').text(data+" "+url);
                             }
                         });
                         $('form#add-userrole, form.edit-userrole').submit(function(){
