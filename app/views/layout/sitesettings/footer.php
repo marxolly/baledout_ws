@@ -124,7 +124,11 @@
                         */
                         $( "#sortable" ).sortable({
                             axis: 'y',
-                            placeholder:"ui-state-highlight"
+                            placeholder:"ui-state-highlight",
+                            stop: function(event, ui){
+                                var data = $(this).sortable('serialize');
+                                $('span#text').text(data);    
+                            }
                         });
                         $('form#add-userrole, form.edit-userrole').submit(function(){
                             if($(this).valid())
