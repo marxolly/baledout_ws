@@ -151,7 +151,6 @@ class User extends Model{
             $query .= " AND active = $active";
         }
         $query .= " ORDER BY name";
-        echo $query;
         return $db->queryData($query);;
     }
 
