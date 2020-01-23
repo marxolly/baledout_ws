@@ -13,14 +13,14 @@
     <?php foreach($user_roles as $ur):
         if(!$this->controller->user->canManageRole($ur['id']))
             continue;
-        $name = ucwords($ur['name']);die()?>
+        $name = ucwords($ur['name']);//die()?>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-10 text-center">
-                                <h2><?php echo $name;?> Users</h2>
+                                <h2><?php echo $name;die();?> Users</h2>
                             </div>
                             <div class="col-xs-2 text-right">
                                  <a class="toggle_roles" data-toggle="collapse" href="#role_<?php echo $ur['id'];?>"><span class="fa arrow huge"></span></a>
