@@ -61,11 +61,15 @@ class ajaxfunctionsController extends Controller
     public function updateRoleRankings()
     {
         //echo "<pre>",print_r($this->request),"</pre>"; die();
-        $this->user->updateRoleHeirarchy($this->request->data['role']);
+        //$this->user->updateRoleHeirarchy($this->request->data['role']);
         $data = array(
             'error'     =>  false,
             'feedback'  =>  ''
         );
+        foreach($this->request->data['role'] as $rank => $id)
+        {
+            $db->updateDatabaseField('user_roles', 'ranking', $rank, $id)
+        }
         $this->view->renderJson($data);
     }
 
