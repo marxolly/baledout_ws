@@ -122,7 +122,10 @@
                             }
                         });
                         */
-                        $( "#sortable" ).sortable();
+                        $( "#sortable" ).sortable({
+                            axis: 'y',
+                            placeholder;"ui-state-highlight"
+                        });
                         $('form#add-userrole, form.edit-userrole').submit(function(){
                             if($(this).valid())
                             {
