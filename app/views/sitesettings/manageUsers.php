@@ -9,11 +9,11 @@
         <div class="col-lg-4"><p><a href="/site-settings/manage-users/active=0" class="btn btn-danger">View Only Inactive Users</a></p></div>
         <div class="col-lg-4"></div>
     </div>
-    <?php echo "<pre>",print_r($_SESSION),"</pre>"; die();?>
+    <?php echo "<pre>",print_r($_SESSION),"</pre>"; //die();?>
     <?php foreach($user_roles as $ur):
         if(!$this->controller->user->canManageRole($ur['id']))
             continue;
-        $name = ucwords($ur['name']);?>
+        $name = ucwords($ur['name']);die()?>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
