@@ -50,7 +50,7 @@
                                                     <div class="col-lg-8">
                                                         <dl class="dl-horizontal user-list">
                                                             <dt>Client Name</dt>
-                                                            <dd><?php echo $this->controller->client->getClientName($user['client_id']);?></dd>
+                                                            <dd><?php //echo $this->controller->client->getClientName($user['client_id']);?></dd>
                                                             <dt>Email</dt>
                                                             <dd><?php echo $user['email'];?></dd>
                                                         </dl>
