@@ -60,7 +60,12 @@ class ajaxfunctionsController extends Controller
 
     public function updateRoleRankings()
     {
-        echo "<pre>",print_r($this->request),"</pre>"; die();
+        //echo "<pre>",print_r($this->request),"</pre>"; die();
+        $data = array(
+            'error'     =>  true,
+            'feedback'  =>  'testing the error'
+        );
+        $this->view->renderJson($data);
     }
 
     public function bulkMoveStock()
