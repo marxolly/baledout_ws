@@ -68,7 +68,7 @@ class ajaxfunctionsController extends Controller
         );
         foreach($this->request->data['role'] as $rank => $id)
         {
-            $db->updateDatabaseField('user_roles', 'ranking', $rank, $id)
+            $db->updateDatabaseField('user_roles', 'ranking', $rank, $id);
         }
         $this->view->renderJson($data);
     }
