@@ -270,10 +270,11 @@ class User extends Model{
     public function UpdateRoleHeirarchy($role_ranks)
     {
         $db = Database::openConnection();
-        print_r($role_ranks);die();
+        //print_r($role_ranks);die();
         $db->updateDatabaseField('user_roles', 'ranking', $rank, $id);
         foreach($role_ranks as $rank => $id)
         {
+            ++$rank;
             $db->updateDatabaseField('user_roles', 'ranking', $rank, $id);
         }
     }
