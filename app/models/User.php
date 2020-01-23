@@ -300,6 +300,18 @@ class User extends Model{
         return $urank <= $admin_rank;
     }
 
+    public function isSuperAdminUser($user_id = null)
+    {
+        $db = Database::openConnection();
+        if(empty($user_id))
+            $user_id = Session::getUserId();
+        $q = "SELECT ur.ranking FROM user_roles ur JOIN users u ON ur.id = u.role_id WHERE u.id = $user_id";
+        $res = $db->queryRow($q);
+        $urank = $res['ranking'];
+        $super_admin_rank = $db->queryValue('user_roles', array('name' => 'super admin'), 'ranking');
+        return $urank <= $super_admin_rank;
+    }
+
     public function emailTaken($email)
     {
         $db = Database::openConnection();
