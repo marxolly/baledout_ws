@@ -63,9 +63,6 @@
                 </form>
             <?php endforeach;?>
         </div>
-        <div class="row">
-            <p>Query String: <span id="text"></span></p>
-        </div>
     <?php else:?>
         <div class="row">
             <div class="col-lg-12">
