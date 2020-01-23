@@ -132,6 +132,14 @@
                                 $.blockUI({ message: '<div style="height:140px; padding-top:20px;"><h2>Updating Heirarchy...</h2></div>' });
                                 $.post(url, data, function(d){
                                     $.unblockUI();
+                                    if(d.error)
+                                    {
+                                        swal({
+                                            title: 'Could not update',
+                                            text: d.feedback,
+                                            icon: "error"
+                                        });
+                                    }
                                 });
                             }
                         });
