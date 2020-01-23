@@ -285,6 +285,8 @@ class User extends Model{
         $user_role_id = $db->queryValue($this->table, array('id' => Session::getUserId()), 'role_id');
         $user_rank = $db->queryValue('user_roles', array('id' => $user_role_id), 'ranking');
         //die($user_role_id." : ".$role_rank);
+        if($this->isSuperAdminUser(Session::getUserId()))
+            return true;
         return ($user_rank < $role_rank);
     }
 
@@ -300,7 +302,7 @@ class User extends Model{
         return $urank <= $admin_rank;
     }
 
-    public function isSuperAdminUser($user_id = null)
+    private function isSuperAdminUser($user_id = null)
     {
         $db = Database::openConnection();
         if(empty($user_id))
