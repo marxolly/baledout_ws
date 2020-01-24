@@ -91,12 +91,11 @@ class User extends Model{
         $vals = array(
             'name'      => $data['name'],
             'email'     => $data['email'],
-            'role_id'   => $data['role_id'],
-            'client_id' => $data['client_id']
+            'role_id'   => $data['role_id']
         );
         if(isset($data['test_user']))
         {
-            $vals['hashed_password'] = password_hash('3PLPlus', PASSWORD_DEFAULT, array('cost' => Config::get('HASH_COST_FACTOR')));
+            $vals['hashed_password'] = password_hash('baledOut', PASSWORD_DEFAULT, array('cost' => Config::get('HASH_COST_FACTOR')));
         }
         $user_id = $db->insertQuery($this->table, $vals);
         return $user_id;

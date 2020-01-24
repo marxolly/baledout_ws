@@ -124,13 +124,6 @@ class FormController extends Controller {
         {
             Form::setError('role_id', 'Please select a role');
         }
-        elseif($role_id == $client_role_id)
-        {
-            if( $client_id == 0 )
-            {
-                Form::setError('client_id', 'Please select a clieny');
-            }
-        }
         if(Form::$num_errors > 0)		/* Errors exist, have user correct them */
         {
             Session::set('value_array', $_POST);
