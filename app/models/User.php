@@ -91,7 +91,8 @@ class User extends Model{
         $vals = array(
             'name'      => $data['name'],
             'email'     => $data['email'],
-            'role_id'   => $data['role_id']
+            'role_id'   => $data['role_id'],
+            'client_id' => $data['client_id']
         );
         if(isset($data['test_user']))
         {
