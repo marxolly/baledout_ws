@@ -146,16 +146,16 @@ Standard Tables
 ******/
 table{
     margin:10px auto;
-    border-bottom:solid 2px #106ea4;
+    border-bottom:solid 2px #f18f01;
     font-size:12px;
 }
 
 td{
     padding:5px;
     vertical-align:top;
-    border-left:thin dotted #106ea4;
-    border-right:thin dotted #106ea4;
-    border-bottom:solid 1px #106ea4;
+    border-left:thin dotted #f18f01;
+    border-right:thin dotted #f18f01;
+    border-bottom:solid 1px #f18f01;
 }
 
 table.pickslip td{
@@ -164,9 +164,9 @@ table.pickslip td{
 
 th{
     text-align:center;
-    border-bottom:solid thin #106ea4;
-    border-left:thin dotted #106ea4;
-    border-right:thin dotted #106ea4;
+    border-bottom:solid thin #f18f01;
+    border-left:thin dotted #f18f01;
+    border-right:thin dotted #f18f01;
     text-align:center;
     font-size:14px;
     background-color: #fff;
@@ -208,7 +208,7 @@ tr.total{
 }
 
 tr.total td{
-    border-top: 3px double #106ea4;
+    border-top: 3px double #f18f01;
     vertical-align: middle;
 }
 
@@ -281,7 +281,7 @@ Responsive Tables
         /* Behave  like a "row" */
         border: none;
         padding-right: 0;
-        border-bottom:dotted 1px #106ea4;
+        border-bottom:dotted 1px #f18f01;
         position: relative;
         padding-left: 50%;
         width: 50% !important;
@@ -301,7 +301,7 @@ Responsive Tables
         font-weight: bold;
         text-align: left;
         content: attr(data-label);
-        border-right:thin solid #106ea4;
+        border-right:thin solid #f18f01;
         /*
         display: inline-block;
         font-weight: bold;
