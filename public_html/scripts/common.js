@@ -877,6 +877,7 @@ $(function() {
     for(var cat in config.allPages)
     {
         //console.log("1 doing: "+cat);
+        $("li#dashboard > a").addClass("active");
         for(var page in config.allPages[cat])
         {
             //console.log("2 doing: "+page);
@@ -889,6 +890,7 @@ $(function() {
             }
         }
         if(foundpage)
+            $("li#dashboard > a").removeClass("active");
             break;
     }
 
