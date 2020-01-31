@@ -138,6 +138,7 @@ return array(
 			'add-client'	=> true,
 			'edit-client'	=> false,
 		),
+        /*
         'products'	=> array(
 			'view-products'			=> true,
 			'add-product'			=> true,
@@ -145,6 +146,7 @@ return array(
             'collections-edit'      =>  true,
             'product-search'        =>  true,
 		),
+
         'inventory'   =>  array(
             'view-inventory'		=>	true,
             'scan-to-inventory'     =>  true,
@@ -155,6 +157,7 @@ return array(
             'solar-returns' => true,
             'move-bulk-items'   => true
         ),
+        */
 		'reports'			=> array(
 		),
         'staff'             => array(
@@ -163,8 +166,8 @@ return array(
         ),
 		'site-settings'		=> array(
             'order-status'				=> 	true,
-			'stock-movement-reasons'	=> 	true,
-            'locations'                 =>  true,
+			//'stock-movement-reasons'	=> 	true,
+            //'locations'                 =>  true,
             'staff'                     =>  true,
             'manage-users'	            =>	true,
             'user-roles'                =>  true,
