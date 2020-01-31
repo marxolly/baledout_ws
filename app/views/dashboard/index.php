@@ -46,7 +46,32 @@ $c = 1;
             </p>
         </div> <!-- end 2nd row -->
         <div class="row">
-
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table Head</th>
+                        <th>Table Head</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     <?php else:?>
         <div class="row">
