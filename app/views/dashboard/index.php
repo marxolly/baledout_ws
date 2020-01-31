@@ -46,7 +46,7 @@ $c = 1;
             </p>
         </div> <!-- end 2nd row -->
         <div class="row">
-            <table>
+            <table width="100%" class="table-striped table-hover" id="the_table" style="width:100%">
                 <thead>
                     <tr>
                         <th>Table Head</th>
