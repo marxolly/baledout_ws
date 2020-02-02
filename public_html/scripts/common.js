@@ -890,8 +890,11 @@ $(function() {
             }
         }
         if(foundpage)
+        {
             $("li#dashboard > a").removeClass("active");
             break;
+        }
+
     }
 
     
