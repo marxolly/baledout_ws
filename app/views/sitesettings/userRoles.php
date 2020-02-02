@@ -59,6 +59,9 @@
                                 <button type="submit" class="btn btn-primary">Update</button>
                             </div>
                         </div>
+                        <div class="col-md-1">
+                            <i class="fas fa-arrows-alt"></i>
+                        </div>
                     </div>
                 </form>
             <?php endforeach;?>
