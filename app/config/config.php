@@ -120,7 +120,7 @@ return array(
             'add-order' =>  true,
             'order-update'			    => false,
 			'process-backorders'	    =>	false,
-			'order-summaries'		    =>	true,
+			//'order-summaries'		    =>	true,
             'edit-address'              =>  false,
             'order-edit'                =>  false,
             'edit-customer'             =>  false,
