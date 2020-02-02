@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <div class="col-md-1">
-                            <i class="fas fa-arrows-alt fa-2x"></i>
+                            <i class="fas fa-arrows-alt fa-2x mover"></i>
                         </div>
                     </div>
                 </form>

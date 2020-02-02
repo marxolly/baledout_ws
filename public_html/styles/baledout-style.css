@@ -886,3 +886,9 @@ div#coming-soon img{
     width: 100%;
     height: auto;
 }
+
+/*Move Cursor*/
+i.mover{
+    margin-top: 28px;
+    cursor: move;    
+}
