@@ -31,6 +31,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h2>Current User Roles</h2>
+            <p class="inst">Drag the <i class="fas fa-arrows-alt"></i> to change the heirarchy</p>
         </div>
     </div>
     <?php if(count($roles)):?>
