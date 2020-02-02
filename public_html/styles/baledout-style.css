@@ -175,6 +175,7 @@ h2,h3,h4,h5,h6{
 
 .sidebar ul li a.active {
     background-color: #fefefe;
+    border-top: 1px solid #F18F01;
 }
 
 .sidebar .arrow {
@@ -890,5 +891,5 @@ div#coming-soon img{
 /*Move Cursor*/
 i.mover{
     margin-top: 28px;
-    cursor: move;    
+    cursor: move;
 }
