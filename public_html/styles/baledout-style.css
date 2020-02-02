@@ -178,6 +178,11 @@ h2,h3,h4,h5,h6{
     border-top: 1px solid #F18F01;
 }
 
+.sidebar ul li#dashboard a.active {
+    background-color: #fefefe;
+    border-top: 1px solid #F18F01;
+}
+
 .sidebar .arrow {
     float: right;
 }
