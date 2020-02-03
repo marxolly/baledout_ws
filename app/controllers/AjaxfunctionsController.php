@@ -982,7 +982,7 @@ class ajaxfunctionsController extends Controller
         //echo "<pre>",print_r($this->request),"</pre>";die();
         $request = trim($this->request->query['name']);
         $current_name = isset($this->request->query['current_name'])? trim($this->request->query['current_name']) : "";
-        $this->view->renderBoolean($this->jobstatus->checkStutusNames($request, $current_name));
+        $this->view->renderBoolean($this->jobstatus->checkStatusNames($request, $current_name));
     }
 
     public function getSuburbs()
