@@ -34,5 +34,23 @@ class Jobstatus extends Model{
         }
         return $ret_string;
     }
+
+    public function checkStatusNames($name, $current_name)
+    {
+        $db = Database::openConnection();
+        $name = strtoupper($name);
+        $current_name = strtoupper($current_name);
+        $q = "SELECT name FROM {$this->table}";
+        $rows = $db->queryData($q);
+        $valid = 'true';
+        foreach($rows as $row)
+        {
+        	if($name == strtoupper($row['name']) && $name != $current_name)
+        	{
+        		$valid = 'false';
+        	}
+        }
+        return $valid;
+    }
 }
 ?>

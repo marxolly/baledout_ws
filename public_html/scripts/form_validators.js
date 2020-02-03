@@ -435,6 +435,21 @@ $(document).ready(function() {
             }
         }
     });
+    ////////////////////////////////////////////////////////////
+    $('form#add-jobstatus').validate({
+        rules:{
+            name:{
+                remote: {
+                    url: '/ajaxfunctions/checkRoleNames'
+                }
+            }
+        },
+        messages:{
+            name:{
+                remote: 'User Role names must be unique'
+            }
+        }
+    });
     ///////////////////////////////////////////////////////////////////////////////
     $("#add_location").validate({
         rules:{
