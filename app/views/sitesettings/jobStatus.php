@@ -60,7 +60,7 @@
                                 <input type="hidden" name="line_id" value="<?php echo $s['id'];?>" />
                                 <button type="submit" class="btn btn-primary" <?php if( (Session::getUserRole() != "super admin" && $s['locked'] > 0) ) echo "disabled"; ?> >Update</button>
                                 <?php if( (Session::getUserRole() != "super admin" && $s['locked'] > 0) ):?>
-                                    <span class="inst">Editing of this label is locked</span>
+                                    &nbsp;<span class="inst">Editing of this label is locked</span>
                                 <?php endif;?>
                             </div>
                         </div>
