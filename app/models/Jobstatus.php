@@ -20,8 +20,7 @@ class Jobstatus extends Model{
         $db = Database::openConnection();
         $check = "";
         $ret_string = "";
-        $query = "SELECT id, name FROM {$this->table} WHERE active = 1";
-        $query .= " ORDER BY name";
+        $query = "SELECT id, name FROM {$this->table} ORDER BY name";
         $statuses = $db->queryData($query);
         foreach($statuses as $s)
         {
