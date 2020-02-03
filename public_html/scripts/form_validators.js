@@ -440,7 +440,7 @@ $(document).ready(function() {
         rules:{
             name:{
                 remote: {
-                    url: '/ajaxfunctions/checkRoleNames'
+                    url: '/ajaxfunctions/checkStatusNames'
                 }
             }
         },
