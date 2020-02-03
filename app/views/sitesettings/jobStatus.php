@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                         <?php endif;?>
-                        <div class="col-md-1">
+                        <div class="col-md-3">
                             <label class="col-form-label">&nbsp;</label>
                             <div class="input-group">
                                 <input type="hidden" name="csrf_token" value="<?php echo Session::generateCsrfToken(); ?>" />
