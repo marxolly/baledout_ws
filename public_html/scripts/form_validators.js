@@ -446,7 +446,7 @@ $(document).ready(function() {
         },
         messages:{
             name:{
-                remote: 'Status names must be unique. this one is already being used'
+                remote: 'Status names must be unique. This one is already being used'
             }
         }
     });
