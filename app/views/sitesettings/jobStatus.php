@@ -58,7 +58,7 @@
                             <div class="input-group">
                                 <input type="hidden" name="csrf_token" value="<?php echo Session::generateCsrfToken(); ?>" />
                                 <input type="hidden" name="line_id" value="<?php echo $s['id'];?>" />
-                                <button type="submit" class="btn btn-primary <?php if( (Session::getUserRole() != "super admin" && $s['locked'] > 0) ) echo "disabled"; ?>" >Update</button>
+                                <button type="submit" class="btn btn-primary" <?php if( (Session::getUserRole() != "super admin" && $s['locked'] > 0) ) echo "disabled"; ?> >Update</button>
                             </div>
                         </div>
                     </div>
