@@ -446,7 +446,7 @@ $(document).ready(function() {
         },
         messages:{
             name:{
-                remote: 'User Role names must be unique'
+                remote: 'Status names must be unique. this one is already being used'
             }
         }
     });
