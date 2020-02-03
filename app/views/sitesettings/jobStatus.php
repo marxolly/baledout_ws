@@ -44,7 +44,7 @@
                             <input type="hidden" name="currentname_<?php echo $s['id'];?>" value="<?php echo $s['name'];?>"/>
                             <?php echo Form::displayError("name_{$s['id']}");?>
                         </div>
-                        <?php if(Session::getUserRole() == "super admin");?>
+                        <?php if(Session::getUserRole() == "super admin"):?>
                             <div class="col-md-1">
                                 <label class="col-form-label">Locked</label>
                                 <div class="checkbox checkbox-default">
