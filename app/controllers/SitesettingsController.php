@@ -88,17 +88,6 @@ class sitesettingsController extends Controller
         ]);
     }
 
-    public function packingTypes()
-    {
-        //render the page
-        Config::setJsConfig('curPage', "packing-types");
-        $packings = $this->packingtype->getPackingTypes();
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/sitesettings/", Config::get('VIEWS_PATH') . 'sitesettings/packingTypes.php',[
-            'page_title'    =>  'Manage Packing Types',
-            'packings'      =>  $packings
-        ]);
-    }
-
     public function couriers()
     {
         $couriers = $this->courier->getCouriers();
@@ -107,17 +96,6 @@ class sitesettingsController extends Controller
         $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/sitesettings/", Config::get('VIEWS_PATH') . 'sitesettings/couriers.php',[
             'page_title'    =>  'Manage Couriers',
             'couriers'      =>  $couriers
-        ]);
-    }
-
-    public function solarOrderTypes()
-    {
-        $types = $this->solarordertype->getTypes();
-        //render the page
-        Config::setJsConfig('curPage', "solar-order-types");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/sitesettings/", Config::get('VIEWS_PATH') . 'sitesettings/solarOrderTypes.php',[
-            'page_title'  =>  'Manage Solar Order Types',
-            'types'      =>  $types
         ]);
     }
 
@@ -151,6 +129,7 @@ class sitesettingsController extends Controller
         Permission::allow('super admin', $resource, ['*']);
         // all other admins
         Permission::allow(['admin'], $resource, [
+            'jobStatus',
             'locations',
             'manageUsers',
             'orderStatus',
