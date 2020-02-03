@@ -48,7 +48,7 @@
                             <div class="col-md-1">
                                 <label class="col-form-label">Locked</label>
                                 <div class="checkbox checkbox-default">
-                                    <input class="form-check-input styled" type="checkbox" id="checked_<?php echo $s['id'];?>" name="checked_<?php echo $s['id'];?>" <?php if($s['checked'] > 0) echo "checked";?> />
+                                    <input class="form-check-input styled" type="checkbox" id="checked_<?php echo $s['id'];?>" name="checked_<?php echo $s['id'];?>" <?php if($s['locked'] > 0) echo "checked";?> />
                                     <label for="active_<?php echo $s['id'];?>"></label>
                                 </div>
                             </div>
