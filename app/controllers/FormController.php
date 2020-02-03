@@ -56,7 +56,7 @@ class FormController extends Controller {
 
     public function procJobStatusAdd()
     {
-
+        $db = Database::openConnection();
         foreach($this->request->data as $field => $value)
         {
             if(!is_array($value))
