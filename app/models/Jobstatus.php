@@ -38,7 +38,17 @@ class Jobstatus extends Model{
     public function addStatus($data)
     {
         $db = Database::openConnection();
-        return false;
+        $o_values = array(
+            'name'  => $data['name']
+        );
+        if($db->insertQuery('orders', $o_values))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public function checkStatusNames($name, $current_name)
