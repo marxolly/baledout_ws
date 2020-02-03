@@ -41,7 +41,7 @@ class Jobstatus extends Model{
         $o_values = array(
             'name'  => $data['name']
         );
-        if($db->insertQuery('orders', $o_values))
+        if($db->insertQuery($this->table, $o_values))
         {
             return true;
         }
