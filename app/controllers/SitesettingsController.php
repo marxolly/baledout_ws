@@ -54,13 +54,13 @@ class sitesettingsController extends Controller
         ]);
     }
 
-    public function orderStatus()
+    public function jobStatus()
     {
         //render the page
-        Config::setJsConfig('curPage', "order-status");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'sitesettings/orderStatus.php',
+        Config::setJsConfig('curPage', "job-status");
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'sitesettings/jobStatus.php',
         [
-            'page_title'    =>  'Manage Order Status Labels'
+            'page_title'    =>  'Manage Job Status Labels'
         ]);
     }
 
