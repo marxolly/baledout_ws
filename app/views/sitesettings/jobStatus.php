@@ -28,6 +28,11 @@
             </div>
         </form>
     </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Current Status Labels</h2> 
+        </div>
+    </div>
     <?php echo "<pre>",print_r($statusses),"</pre>"; ?>
 
 
