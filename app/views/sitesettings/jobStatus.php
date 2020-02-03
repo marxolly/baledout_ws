@@ -30,18 +30,19 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <h2>Current Status Labels</h2> 
+            <h2>Current Status Labels</h2>
         </div>
     </div>
-    <?php echo "<pre>",print_r($statusses),"</pre>"; ?>
+    <?php if(count($statusses)):?>
 
-
-
-
-
-    <div class="row">
-        <div class="col-lg-12">
-
+    <?php else:?>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="errorbox">
+                    <h2><i class="fas fa-exclamation-triangle"></i> No Status Labels Listed</h2>
+                    <p>You will need to add some first</p>
+                </div>
+            </div>
         </div>
-    </div>
+    <?php endif;?>
 </div>
