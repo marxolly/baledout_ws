@@ -68,5 +68,11 @@ class Jobstatus extends Model{
         }
         return $valid;
     }
+
+    public function getAllStatuses()
+    {
+        $db = Database::openConnection();
+        return $db->queryData("SELECT * FROM {$this->table} ORDER By name");
+    }
 }
 ?>

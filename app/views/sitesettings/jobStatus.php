@@ -28,7 +28,7 @@
             </div>
         </form>
     </div>
-
+    <?php echo "<pre>",print_r($statusses),"</pre>"; ?>
 
 
 
@@ -36,7 +36,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <select  class="form-control selectpicker" name="status"><?php echo $this->controller->jobstatus->getSelectStatus();?></select>
+
         </div>
     </div>
 </div>
