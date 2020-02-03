@@ -40,7 +40,7 @@
                     <div class="form-group row">
                         <div class="col-md-3">
                             <label class="col-form-label">Name</label>
-                            <input type="text" class="form-control required statusname" name="name_<?php echo $r['id'];?>" id="name_<?php echo $s['id'];?>" value="<?php echo ucwords($s['name']);?>" />
+                            <input type="text" class="form-control required statusname" name="name_<?php echo $s['id'];?>" id="name_<?php echo $s['id'];?>" value="<?php echo ucwords($s['name']);?>" />
                             <input type="hidden" name="currentname_<?php echo $s['id'];?>" value="<?php echo $s['name'];?>"/>
                             <?php echo Form::displayError("name_{$s['id']}");?>
                         </div>
@@ -48,7 +48,7 @@
                             <div class="col-md-1">
                                 <label class="col-form-label">Locked</label>
                                 <div class="checkbox checkbox-default">
-                                    <input class="form-check-input styled" type="checkbox" id="checked_<?php echo $r['id'];?>" name="checked_<?php echo $s['id'];?>" <?php if($s['checked'] > 0) echo "checked";?> />
+                                    <input class="form-check-input styled" type="checkbox" id="checked_<?php echo $s['id'];?>" name="checked_<?php echo $s['id'];?>" <?php if($s['checked'] > 0) echo "checked";?> />
                                     <label for="active_<?php echo $s['id'];?>"></label>
                                 </div>
                             </div>
