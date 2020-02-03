@@ -98,7 +98,7 @@ return array(
     * Pages and icons
     **************************************************************************/
     "MENU_ICONS"    =>  array(
-        'orders'            =>  'fas fa-truck',
+        'jobs'            =>  'fas fa-truck',
 		'clients'	        =>	'fas fa-user-tie',
 		'products'	        =>	'fas fa-dolly',
 		'inventory'	        =>	'fas fa-tasks',
@@ -116,48 +116,25 @@ return array(
         'scheduling'        =>  'far fa-calendar-alt', 
     ),
     "ADMIN_PAGES"   =>  array(
-        'orders' => array(
-            'add-order' =>  true,
-            'order-update'			    => false,
-			'process-backorders'	    =>	false,
-			//'order-summaries'		    =>	true,
+        'jobs' => array(
+            'add-job' =>  true,
+            'job-update'			    => false,
             'edit-address'              =>  false,
-            'order-edit'                =>  false,
+            'job-edit'                =>  false,
             'edit-customer'             =>  false,
-            'order-search'              =>  true,
-            'order-search-results'      =>  false,
-            'order-details'             =>  false,
-            'order-dispatching'         =>  true,
-            'view-orders'               =>  true,
+            'job-search'              =>  true,
+            'job-search-results'      =>  false,
+            'job-details'             =>  false,
+            'view-jobs'               =>  true,
             'address-update'            =>  false,
             'items-update'              =>  false,
-            'order-importing'           =>  true,
+            'job-importing'           =>  true,
         ),
 		'clients'	=> array(
 			'view-clients'	=> true,
 			'add-client'	=> true,
 			'edit-client'	=> false,
 		),
-        /*
-        'products'	=> array(
-			'view-products'			=> true,
-			'add-product'			=> true,
-			'edit-product'			=> false,
-            'collections-edit'      =>  true,
-            'product-search'        =>  true,
-		),
-
-        'inventory'   =>  array(
-            'view-inventory'		=>	true,
-            'scan-to-inventory'     =>  true,
-            'product-movement'      =>  false,
-            'add-subtract-stock'    =>  false,
-            'quality-control'       =>  false,
-            'transfer-location' => true,
-            'solar-returns' => true,
-            'move-bulk-items'   => true
-        ),
-        */
 		'reports'			=> array(
 		),
         'staff'             => array(
@@ -165,9 +142,7 @@ return array(
         'data-entry'    =>  array(
         ),
 		'site-settings'		=> array(
-            'order-status'				=> 	true,
-			//'stock-movement-reasons'	=> 	true,
-            //'locations'                 =>  true,
+            'job-status'				=> 	true, 
             'staff'                     =>  true,
             'manage-users'	            =>	true,
             'user-roles'                =>  true,
