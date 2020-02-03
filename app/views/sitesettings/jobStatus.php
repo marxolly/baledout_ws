@@ -34,7 +34,37 @@
         </div>
     </div>
     <?php if(count($statusses)):?>
-
+        <div class="row">
+            <?php foreach($statusses as $s):?>
+                <form class="edit-jobstatus" id="role_<?php echo $s['id'];?>"action="/form/procJobStatusEdit" method="post">
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label class="col-form-label">Name</label>
+                            <input type="text" class="form-control required statusname" name="name_<?php echo $r['id'];?>" id="name_<?php echo $s['id'];?>" value="<?php echo ucwords($s['name']);?>" />
+                            <input type="hidden" name="currentname_<?php echo $s['id'];?>" value="<?php echo $s['name'];?>"/>
+                            <?php echo Form::displayError("name_{$s['id']}");?>
+                        </div>
+                        <?php if(Session::getUserRole() == "super admin");?>
+                            <div class="col-md-1">
+                                <label class="col-form-label">Locked</label>
+                                <div class="checkbox checkbox-default">
+                                    <input class="form-check-input styled" type="checkbox" id="checked_<?php echo $r['id'];?>" name="checked_<?php echo $s['id'];?>" <?php if($s['checked'] > 0) echo "checked";?> />
+                                    <label for="active_<?php echo $s['id'];?>"></label>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                        <div class="col-md-1">
+                            <label class="col-form-label">&nbsp;</label>
+                            <div class="input-group">
+                                <input type="hidden" name="csrf_token" value="<?php echo Session::generateCsrfToken(); ?>" />
+                                <input type="hidden" name="line_id" value="<?php echo $s['id'];?>" />
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            <?php endforeach;?>
+        </div>
     <?php else:?>
         <div class="row">
             <div class="col-lg-12">
