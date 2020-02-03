@@ -58,7 +58,7 @@ class sitesettingsController extends Controller
     {
         //render the page
         Config::setJsConfig('curPage', "job-status");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'sitesettings/jobStatus.php',
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/sitesettings/", Config::get('VIEWS_PATH') . 'sitesettings/jobStatus.php',
         [
             'page_title'    =>  'Manage Job Status Labels'
         ]);
