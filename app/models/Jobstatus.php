@@ -37,7 +37,8 @@ class Jobstatus extends Model{
 
     public function addStatus($data)
     {
-        echo "<pre>",print_r($data),"</pre>";die();
+        $db = Database::openConnection();
+        return true;
     }
 
     public function checkStatusNames($name, $current_name)
