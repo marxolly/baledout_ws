@@ -24,8 +24,8 @@ class Jobstatus extends Model{
         $statuses = $db->queryData($query);
         foreach($statuses as $s)
         {
-            $label = $c['name'];
-            $value = $c['id'];
+            $label = $s['name'];
+            $value = $s['id'];
             if($selected)
             {
                 $check = ($value == $selected)? "selected='selected'" : "";
