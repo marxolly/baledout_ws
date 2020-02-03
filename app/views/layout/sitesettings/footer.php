@@ -55,6 +55,12 @@
                         });
                     }
                 },
+                'job-status': {
+                    init: function()
+                    {
+                        
+                    }
+                },
                 'packing-types': {
                     init: function()
                     {
