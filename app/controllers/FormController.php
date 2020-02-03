@@ -67,11 +67,11 @@ class FormController extends Controller {
         }
         if( !$this->dataSubbed($name) )
         {
-            Form::setError('name_', 'A name is required');
+            Form::setError('name', 'A name is required');
         }
         elseif( ($db->fieldValueTaken('job_status', $name, 'name')) )
         {
-            Form::setError('name_', 'Names need to be unique');
+            Form::setError('name', 'Names need to be unique');
         }
         if(Form::$num_errors > 0)		/* Errors exist, have user correct them */
         {
@@ -80,7 +80,15 @@ class FormController extends Controller {
         }
         else
         {
-           echo "<pre>",print_r($this->request->data),"</pre>"; die();
+           //all good, add details
+            if($this->jobStatus->addStatus($post_data))
+            {
+                Session::set('feedback', "Those details have been added to the system");
+            }
+            else
+            {
+                Session::set('errorfeedback', 'A database error has occurred. Please try again');
+            }
         }
         return $this->redirector->to(PUBLIC_ROOT."site-settings/job-status");
     }
