@@ -40,7 +40,9 @@ class FormController extends Controller {
         parent::beforeAction();
         $action = $this->request->param('action');
         $actions = [
+            'procCourierEdit',
             'procForgotPassword',
+            'procJobStatusAdd',
             'procLogin',
             'procProfileUpdate',
             'procUpdatePassword',
@@ -50,6 +52,11 @@ class FormController extends Controller {
         ];
         $this->Security->config("form", [ 'fields' => ['csrf_token']]);
         $this->Security->requirePost($actions);
+    }
+
+    public function procJobStatusAdd()
+    {
+        echo "<pre>",print_r($this->request->data),"</pre>"; die();
     }
 
     public function procCourierEdit()
