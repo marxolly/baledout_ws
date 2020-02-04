@@ -57,7 +57,7 @@ class FormController extends Controller {
 
     public function procJobStatusEdit()
     {
-        echo "<pre>",$_POST,"</pre>"; //die();
+        echo "<pre>",print_r($this->request->data),"</pre>"; die();
         $db = Database::openConnection();
 
 
