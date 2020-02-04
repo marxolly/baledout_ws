@@ -79,6 +79,7 @@ class FormController extends Controller {
         else
         {
             $this->jobstatus->editStatus($name, $id);
+            Session::set('feedback', "That label has been updated in the system");
         }
         return $this->redirector->to(PUBLIC_ROOT."site-settings/job-status");
     }
