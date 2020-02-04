@@ -36,7 +36,7 @@
     <?php if(count($statusses)):?>
         <div class="row">
             <?php foreach($statusses as $s):?>
-                <form class="edit-jobstatus" id="role_<?php echo $s['id'];?>"action="/form/procJobStatusEdit" method="post">
+                <form class="edit-jobstatus" id="status_<?php echo $s['id'];?>"action="/form/procJobStatusEdit" method="post">
                     <div class="form-group row">
                         <div class="col-md-3">
                             <label class="col-form-label">Name</label>
