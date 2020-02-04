@@ -43,6 +43,7 @@ class FormController extends Controller {
             'procCourierEdit',
             'procForgotPassword',
             'procJobStatusAdd',
+            'procJobStatusEdit',
             'procLogin',
             'procProfileUpdate',
             'procUpdatePassword',
@@ -52,6 +53,12 @@ class FormController extends Controller {
         ];
         $this->Security->config("form", [ 'fields' => ['csrf_token']]);
         $this->Security->requirePost($actions);
+    }
+
+    public function procJobStatusEdit()
+    {
+        echo "<pre>",print_r($this->request->data),"</pre>"; //die();
+
     }
 
     public function procJobStatusAdd()
