@@ -971,16 +971,15 @@ class ajaxfunctionsController extends Controller
 
     public function checkRoleNames()
     {
-        echo "<pre>",print_r($this->request),"</pre>";die();
+        //echo "<pre>",print_r($this->request),"</pre>";die();
         $request = trim($this->request->query['name']);
-
         $current_name = isset($this->request->query['current_name'])? trim($this->request->query['current_name']) : "";
         $this->view->renderBoolean($this->user->checkRoleNames($request, $current_name));
     }
 
     public function checkStatusNames()
     {
-        //echo "<pre>",print_r($this->request),"</pre>";die();
+        echo "<pre>",print_r($this->request),"</pre>";die();
         $request = trim($this->request->query['name']);
         $current_name = isset($this->request->query['current_name'])? trim($this->request->query['current_name']) : "";
         $this->view->renderBoolean($this->jobstatus->checkStatusNames($request, $current_name));
