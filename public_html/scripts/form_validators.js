@@ -262,24 +262,7 @@ $(document).ready(function() {
         }
     });
     ////////////////////////////////////////////////////////////
-    $('form.edit-jobstatus').each(function(i,e){
-        console.log('validating a form');
-         $(this).validate({
-            rules:{
-                name:{
-                    remote: {
-                        url: '/ajaxfunctions/checkStatusNames'
-                    }
-                }
-            },
-            messages:{
-                name:{
-                    remote: 'Status names must be unique. This one is already being used'
-                }
-            }
-        });
-        console.log('validated a form');
-    });
+    
 
     ///////////////////////////////////////////////////////////////////////////////
     $("#add_location").validate({
