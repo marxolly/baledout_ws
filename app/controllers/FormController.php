@@ -57,10 +57,30 @@ class FormController extends Controller {
 
     public function procJobStatusEdit()
     {
-        echo "<pre>",print_r($this->request->data),"</pre>"; die();
+        //echo "<pre>",print_r($this->request->data),"</pre>"; die();
         $db = Database::openConnection();
+        $id = $this->request->data['line_id'];
+        $name = $this->request->data['name_'.$id];
+        $current_name = $this->request->data['currentname_'.$id];
+        if( !$this->dataSubbed($name) )
+        {
+            Form::setError('name_'.$id, 'A name is required');
+        }
+        elseif( ($db->fieldValueTaken('job_status', $name, 'name')) && $name != $current_name )
+        {
+            Form::setError('name_'.$id, 'Names need to be unique');
+        }
 
-
+        if(Form::$num_errors > 0)		/* Errors exist, have user correct them */
+        {
+            Session::set('value_array', $_POST);
+            Session::set('error_array', Form::getErrorArray());
+        }
+        else
+        {
+            echo "<pre>",print_r($this->request->data),"</pre>"; die();
+        }
+        return $this->redirector->to(PUBLIC_ROOT."site-settings/job-status");
     }
 
     public function procJobStatusAdd()
