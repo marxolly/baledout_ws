@@ -66,13 +66,13 @@
                                         remote: {
                                             url: '/ajaxfunctions/checkStatusNames'
                                         },
-                                        required:true 
+                                        required:true
                                     }
                                 },
                                 messages:{
                                     name:{
                                         remote: 'Status names must be unique. This one is already being used',
-                                        required: "enter a furkin name!"
+                                        required: 'enter a furkin name!'
                                     }
                                 }
                             });
