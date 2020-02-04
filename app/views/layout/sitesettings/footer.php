@@ -65,12 +65,14 @@
                                     name:{
                                         remote: {
                                             url: '/ajaxfunctions/checkStatusNames'
-                                        }
+                                        },
+                                        required:true 
                                     }
                                 },
                                 messages:{
                                     name:{
-                                        remote: 'Status names must be unique. This one is already being used'
+                                        remote: 'Status names must be unique. This one is already being used',
+                                        required: "enter a furkin name!"
                                     }
                                 }
                             });
