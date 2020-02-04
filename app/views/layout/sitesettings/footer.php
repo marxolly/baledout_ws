@@ -59,6 +59,7 @@
                     init: function()
                     {
                         $('form.edit-jobstatus').each(function(i,e){
+                            console.log('Editing form '+$this.id);
                              $(this).validate({
                                 rules:{
                                     name:{
