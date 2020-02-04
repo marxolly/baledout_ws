@@ -51,6 +51,13 @@ class Jobstatus extends Model{
         }
     }
 
+    public function editStatus($name, $id)
+    {
+        $db = Database::openConnection();
+        $db->updateDatabaseField($this->table, 'name', $name, $id);
+    }
+    
+
     public function checkStatusNames($name, $current_name)
     {
         $db = Database::openConnection();

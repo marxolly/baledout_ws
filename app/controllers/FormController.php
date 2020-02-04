@@ -78,7 +78,7 @@ class FormController extends Controller {
         }
         else
         {
-            echo "<pre>",print_r($this->request->data),"</pre>"; die();
+            $this->jobstatus->editStatus($name, $id);
         }
         return $this->redirector->to(PUBLIC_ROOT."site-settings/job-status");
     }
