@@ -83,7 +83,7 @@ class FormController extends Controller {
            //all good, add details
             if($this->jobstatus->addStatus($post_data))
             {
-                Session::set('feedback', "Those details have been added to the system");
+                Session::set('feedback', "That label has been added to the system, it should be showing below");
             }
             else
             {
