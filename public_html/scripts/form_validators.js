@@ -263,6 +263,7 @@ $(document).ready(function() {
     });
     ////////////////////////////////////////////////////////////
     $('form.edit-jobstatus').each(function(i,e){
+        console.log('validating a form');
          $(this).validate({
             rules:{
                 name:{
