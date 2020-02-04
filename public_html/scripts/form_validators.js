@@ -121,64 +121,6 @@ $(document).ready(function() {
 			}
 		}
 	});
-    ///////////////////////////////////////////////////////////////////////////////
-    $("#make_pack_items").validate({
-         rules:{
-    		make_to_location:{
-    			notNone: true
-    		}
-    	},
-		messages:{
-			make_to_location:{
-				notNone: "A location must be chosen"
-			},
-
-		}
-	});
-    ///////////////////////////////////////////////////////////////////////////////
-    $("#container_unloading").validate({
-        rules:{
-            container_size:{
-                notNone: true
-            },
-            client_id:{
-                notNone: true
-            },
-            load_type:{
-                notNone: true
-            }
-        },
-        messages:{
-            container_size:{
-                notNone: "A container size is required"
-            },
-            client_id:{
-                notNone: "A client is required"
-            },
-            load_type:{
-                notNone: "A load type is required"
-            }
-        }
-	});
-    ///////////////////////////////////////////////////////////////////////////////
-    $("#break_pack_items").validate({
-        rules:{
-            break_count:{
-                max: function() {
-                    return parseInt($('#available_packs').val());
-                }
-            },
-            pi_location_id:{
-                notNone: true
-            }
-        },
-        messages:{
-            break_count:{
-                max: "You cannot break more than there are"
-            }
-        }
-
-	});
 	////////////////////////////////////////////////////////////
 	$("#client_edit, #client_add").validate({
     	rules:{
@@ -201,80 +143,6 @@ $(document).ready(function() {
 
     });
     ////////////////////////////////////////////////////////////
-    $('form#client_daily_reports').validate({
-        rules:{
-            client_id:{
-                notNone: true
-            },
-            "client_reports[]": {
-                required: true
-            }
-        }
-    });
-    ///////////////////////////////////////////////////////////////////////////////
-    $("#book-pickup").validate({
-        rules:{
-            pallets:{
-                require_from_group: [1, ".counter"]
-            },
-            cartons:{
-                require_from_group: [1, ".counter"]
-            }
-    	}
-	});
-    ///////////////////////////////////////////////////////////////////////////////
-    $("#record-pickup").validate({
-        rules:{
-            pallets:{
-                require_from_group: [1, ".counter"]
-            },
-            cartons:{
-                require_from_group: [1, ".counter"]
-            }
-    	}
-	});
-    ////////////////////////////////////////////////////////////
-    $('form#truck-usage').validate({
-        rules:{
-            client_id:{
-                notNone: true
-            }
-        }
-    });
-    ////////////////////////////////////////////////////////////
-    $('form#items-update').validate({
-        rules:{
-            'items[]':{
-                wholePallets: true
-            }
-        }
-    });
-    ////////////////////////////////////////////////////////////
-    $('form#goodsin, form#goodsout').validate({
-        rules: {
-            pallet_count: {
-                require_from_group: [1, ".counter"]
-            },
-            carton_count: {
-                require_from_group: [1, ".counter"]
-            },
-            satchel_count: {
-                require_from_group: [1, ".counter"]
-            }
-        }
-    });
-    ////////////////////////////////////////////////////////////
-    $('form#quality_control').validate({
-        rules: {
-            qty_add: {
-                require_from_group: [1, ".number"]
-            },
-            qty_subtract: {
-                require_from_group: [1, ".number"]
-            }
-        }
-    });
-    ////////////////////////////////////////////////////////////
     $('form#add_user').validate({
         rules:{
             role_id:{
@@ -284,63 +152,6 @@ $(document).ready(function() {
         messages:{
             role_id:{
                 notNone: "Please select a role"
-            }
-        }
-    });
-    ////////////////////////////////////////////////////////////
-    $('form#add_to_stock').validate({
-        rules:{
-            add_to_location:{
-                notNone: true
-            },
-            reason_id:{
-                notNone: true
-            }
-        },
-        messages:{
-            add_to_location:{
-                notNone: "Please select a location"
-            },
-            reason_id:{
-                notNone: "Please select a reason"
-            }
-        }
-    });
-    ////////////////////////////////////////////////////////////
-    $('form#move_stock').validate({
-        rules:{
-            move_to_location:{
-                notNone: true
-            },
-            move_from_location:{
-                notNone: true
-            }
-        },
-        messages:{
-            move_to_location:{
-                notNone: "Please select a location"
-            },
-            move_from_location:{
-                notNone: "Please select a location"
-            }
-        }
-    });
-    ////////////////////////////////////////////////////////////
-    $('form#subtract_from_stock').validate({
-        rules:{
-            subtract_from_location:{
-                notNone: true
-            },
-            reason_id:{
-                notNone: true
-            }
-        },
-        messages:{
-            subtract_from_location:{
-                notNone: "Please select a location"
-            },
-            reason_id:{
-                notNone: "Please select a reason"
             }
         }
     });
@@ -437,6 +248,21 @@ $(document).ready(function() {
     });
     ////////////////////////////////////////////////////////////
     $('form#add-jobstatus').validate({
+        rules:{
+            name:{
+                remote: {
+                    url: '/ajaxfunctions/checkStatusNames'
+                }
+            }
+        },
+        messages:{
+            name:{
+                remote: 'Status names must be unique. This one is already being used'
+            }
+        }
+    });
+    ////////////////////////////////////////////////////////////
+    $('form.edit-jobstatus').validate({
         rules:{
             name:{
                 remote: {
