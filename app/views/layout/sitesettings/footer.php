@@ -58,23 +58,6 @@
                 'job-status': {
                     init: function()
                     {
-                        $('form.edit-jobstatus').each(function(i,e){
-                            console.log('Editing form '+ this.id);
-                             $(this).validate({
-                                rules:{
-                                    name:{
-                                        remote: {
-                                            url: '/ajaxfunctions/checkStatusNames'
-                                        }
-                                    }
-                                },
-                                messages:{
-                                    name:{
-                                        remote: 'Status names must be unique. This one is already being used'
-                                    }
-                                }
-                            });
-                        });
                         $('form#add-jobstatus, form.edit-jobstatus').submit(function(){
                             if($(this).valid())
                             {
