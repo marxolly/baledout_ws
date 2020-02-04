@@ -46,10 +46,10 @@
                         </div>
                         <?php if(Session::getUserRole() == "super admin"):?>
                             <div class="col-md-1">
-                                <label class="col-form-label">Locked</label>
+                                <label class="col-form-label" for="checked_<?php echo $s['id'];?>">Locked</label>
                                 <div class="checkbox checkbox-default">
                                     <input class="form-check-input styled" type="checkbox" id="checked_<?php echo $s['id'];?>" name="checked_<?php echo $s['id'];?>" <?php if($s['locked'] > 0) echo "checked";?> />
-                                    <label for="active_<?php echo $s['id'];?>"></label>
+                                    <label for="checked_<?php echo $s['id'];?>"></label>
                                 </div>
                             </div>
                         <?php endif;?>
