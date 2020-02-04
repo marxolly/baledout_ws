@@ -262,20 +262,23 @@ $(document).ready(function() {
         }
     });
     ////////////////////////////////////////////////////////////
-    $('form.edit-jobstatus').validate({
-        rules:{
-            name:{
-                remote: {
-                    url: '/ajaxfunctions/checkStatusNames'
+    $('form.edit-jobstatus').each(function(i,e){
+         $(this).validate({
+            rules:{
+                name:{
+                    remote: {
+                        url: '/ajaxfunctions/checkStatusNames'
+                    }
+                }
+            },
+            messages:{
+                name:{
+                    remote: 'Status names must be unique. This one is already being used'
                 }
             }
-        },
-        messages:{
-            name:{
-                remote: 'Status names must be unique. This one is already being used'
-            }
-        }
+        });
     });
+
     ///////////////////////////////////////////////////////////////////////////////
     $("#add_location").validate({
         rules:{
