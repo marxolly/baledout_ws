@@ -33,7 +33,7 @@
                     $rolename = ucwords($ur['name']);?>
                     <tbody>
                         <tr>
-                            <th colspan="4"><?php echo $rolename;?></th>
+                            <td colspan="4"><?php echo $rolename;?></td>
                         </tr>
                         <?php $users = $this->controller->user->getAllUsersByRoleID($ur['id'], $active);
                         if(count($users)):
