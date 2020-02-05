@@ -181,6 +181,9 @@
                 'manage-users':{
                     init: function(){
                         dataTable.init($('table#view_users_table'), {
+                            "columnDefs": [
+                                { "orderable": false, "targets": [1] }
+                            ]
                         } );
                         actions.common.userActivation();
                     }
