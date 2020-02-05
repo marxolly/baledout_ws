@@ -182,7 +182,7 @@
                     init: function(){
                         dataTable.init($('table#view_users_table'), {
                             "columnDefs": [
-                                { "orderable": false, "targets": [1] }
+                                { "orderable": false, "targets": [0] }
                             ]
                         } );
                         actions.common.userActivation();
