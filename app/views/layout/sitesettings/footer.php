@@ -180,16 +180,8 @@
                 },
                 'manage-users':{
                     init: function(){
-                        /*
-                        $('a.toggle_roles').click(function(e){
-                            $(this).toggleClass('hiding');
-                        });
-                        */
-                        $('a.toggle_roles').each(function(i,e){
-                            $(this).click(function(e){
-                                $(this).toggleClass('hiding');
-                            })
-                        });
+                        dataTable.init($('table#view_users_table'), {
+                        } );
                         actions.common.userActivation();
                     }
                 },
