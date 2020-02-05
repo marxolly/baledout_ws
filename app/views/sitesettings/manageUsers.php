@@ -33,9 +33,7 @@
                         continue;
                     $rolename = ucwords($ur['name']);?>
 
-                        <tr>
-                            <td colspan="4"><?php echo $rolename;?></td>
-                        </tr>
+                        
                         <?php $users = $this->controller->user->getAllUsersByRoleID($ur['id'], $active);
                         if(count($users)):
                             foreach($users as $user):?>
@@ -56,7 +54,7 @@
                         <?php endif;?>
 
                 <?php endforeach;?>
-                </tbody> 
+                </tbody>
             </table>
         </div>
 
