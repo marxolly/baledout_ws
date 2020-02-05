@@ -35,6 +35,14 @@
                         <tr>
                             <th colspan="4"><?php echo $rolename;?></th>
                         </tr>
+                        <?php foreach($this->controller->user->getAllUsersByRoleID($ur['id'], $active) as $user):?>
+                            <tr>
+                                <td><img src="/images/profile_pictures/<?php echo $user['profile_picture'];?>" alt="profile image" class="img-thumbnail" /> <?php echo $user['name'];?></td>
+                                <td><?php echo $this->controller->client->getClientName($user['client_id']);?></td>
+                                <td><?php echo $user['email'];?></td>
+                                <td></td>
+                            </tr>
+                        <?php endforeach;?>
                     </tbody>
                 <?php endforeach;?>
             </table>
