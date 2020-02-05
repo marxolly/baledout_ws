@@ -18,7 +18,7 @@
     </div>
     <div class="row" id="table_holder" style="display:none">
         <div class="col-md-12">
-            <table class="table-striped table-hover" id="view_users_table">
+            <table class="table-striped table-hover" id="view_users_table" width="100%">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -26,6 +26,7 @@
                         <th>Client Name</th>
                         <th>Email</th>
                         <th>Last Login</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,6 +42,7 @@
                                 <td><?php echo $rolename;?></td>
                                 <td><?php echo $this->controller->client->getClientName($user['client_id']);?></td>
                                 <td><?php echo $user['email'];?></td>
+                                <td></td>
                                 <td></td>
                             </tr>
                             <?php endforeach;
