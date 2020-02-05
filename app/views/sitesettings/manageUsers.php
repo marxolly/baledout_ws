@@ -27,11 +27,12 @@
                         <th>Last Login</th>
                     </tr>
                 </thead>
+                <tbody>
                 <?php foreach($user_roles as $ur):
                     if(!$this->controller->user->canManageRole($ur['id']))
                         continue;
                     $rolename = ucwords($ur['name']);?>
-                    <tbody>
+
                         <tr>
                             <td colspan="4"><?php echo $rolename;?></td>
                         </tr>
@@ -53,8 +54,9 @@
                                 <td></td>
                             </tr>
                         <?php endif;?>
-                    </tbody>
+
                 <?php endforeach;?>
+                </tbody> 
             </table>
         </div>
 
