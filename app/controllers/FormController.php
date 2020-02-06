@@ -489,6 +489,7 @@ class FormController extends Controller {
 
             $this->login->resetFailedLogins($email);
             $this->login->resetPasswordToken($userId);
+            $this->login->recordLogin($userId);
             $redirect = ltrim($redirect, "/");
             //die('redirect');
             return $this->redirector->root($redirect);
