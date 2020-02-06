@@ -111,7 +111,10 @@ class Login extends Model{
     public function updatePassword($hashedPassword, $userId)
     {
         $db = Database::openConnection();
-        $db->updateDatabaseField('users', 'hashed_password', $hashedPassword, $userId);
+        $db->updateDatabaseFields('users', array(
+            'hashed_password' => $hashedPassword
+            'password_change' => time()
+        ), $userId);
     }
 
     public function isIpBlocked($userIp){
