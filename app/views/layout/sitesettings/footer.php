@@ -181,6 +181,7 @@
                 'manage-users':{
                     init: function(){
                         dataTable.init($('table#view_users_table'), {
+                            "ordering": false
                         } );
                         actions.common.userActivation();
                     }
