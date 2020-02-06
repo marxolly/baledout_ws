@@ -18,7 +18,7 @@
     </div>
     <div class="row" id="table_holder" style="display:none">
         <div class="col-md-12">
-            <table class="table-striped table-hover" id="view_users_table" width="100%">
+            <table class="table-striped table-hover view-users" id="view_users_table" width="100%">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -38,7 +38,7 @@
                         if(count($users)):
                             foreach($users as $user):?>
                             <tr>
-                                <td><img src="/images/profile_pictures/<?php echo $user['profile_picture'];?>" alt="profile image" class="img-thumbnail" /> <?php echo $user['name'];?></td>
+                                <td class="username"><img src="/images/profile_pictures/<?php echo $user['profile_picture'];?>" alt="profile image" class="img-thumbnail" /> <?php echo $user['name'];?></td>
                                 <td><?php echo $rolename;?></td>
                                 <td><?php echo $this->controller->client->getClientName($user['client_id']);?></td>
                                 <td><?php echo $user['email'];?></td>
