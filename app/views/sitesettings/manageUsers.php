@@ -36,7 +36,8 @@
                     $rolename = ucwords($ur['name']);?>
                         <?php $users = $this->controller->user->getAllUsersByRoleID($ur['id'], $active);
                         if(count($users)):
-                            foreach($users as $user):?>
+                            foreach($users as $user):
+                            $last_log = ($user['last_log'] > 0)? date("F j, Y, g:i a", $user['last_log']):"Never"?>
                             <tr>
                                 <td class="username"><img src="/images/profile_pictures/<?php echo $user['profile_picture'];?>" alt="profile image" class="img-thumbnail" /> <?php echo $user['name'];?></td>
                                 <td><?php echo $rolename;?></td>
