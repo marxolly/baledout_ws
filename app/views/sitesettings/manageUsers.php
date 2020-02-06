@@ -43,7 +43,7 @@
                                 <td><?php echo $rolename;?></td>
                                 <td><?php echo $this->controller->client->getClientName($user['client_id']);?></td>
                                 <td><?php echo $user['email'];?></td>
-                                <td><?php echo $user['last_log'];?></td>
+                                <td><?php echo $last_log;?></td>
                                 <td></td>
                             </tr>
                             <?php endforeach;
