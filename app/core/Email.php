@@ -31,7 +31,7 @@
 		$mail->SetFrom(Config::get('EMAIL_FROM'), Config::get('EMAIL_FROM_NAME'));
 		$mail->Subject = "Access Instructions For 3PLPlus WMS";
 		$mail->MsgHTML($body);
-        $mail->addAttachment(Config::get('EMAIL_ATTACHMENTS_PATH')."WMS Instructions.docx", 'wms_instructions.docx');
+        $mail->addAttachment(Config::get('EMAIL_ATTACHMENTS_PATH')."Portal Instructions.docx", 'portal_instructions.docx');
         $mail->AddAddress($email, $name);
         $mail->AddBCC('mark@baledout.com.au', 'Mark Solly');
         if(!$mail->Send())
@@ -42,4 +42,4 @@
     }
 
  }
-	
+
