@@ -252,6 +252,14 @@ tr.express{
     background:url(/styles/images/ui_images/ui-bg_gloss-wave_35_f6a828_500x100.png);
 }
 
+table.view-users td{
+    vertical-align: middle;
+}
+
+table.view-user img{
+    height:100px;
+}
+
 /*****
 Responsive Tables
 ******/
