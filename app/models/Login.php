@@ -112,7 +112,7 @@ class Login extends Model{
     {
         $db = Database::openConnection();
         $db->updateDatabaseFields('users', array(
-            'hashed_password' => $hashedPassword
+            'hashed_password' => $hashedPassword,
             'password_change' => time()
         ), $userId);
     }
