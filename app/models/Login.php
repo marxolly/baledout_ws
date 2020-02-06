@@ -76,6 +76,12 @@ class Login extends Model{
         $db->query($query);
     }
 
+    public function recordLogin($userId)
+    {
+        $db = Database::openConnection();
+        $db->updateDatabaseField('users', 'last_log', time(), $userId); 
+    }
+
     public function generateForgottenPasswordToken($userId, $forgottenPassword){
 
         $db = Database::openConnection();
