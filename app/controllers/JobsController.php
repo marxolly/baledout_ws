@@ -22,7 +22,7 @@ class JobsController extends Controller{
         $client_id = 0;
         $fulfilled = 0;
         $state = "";
-        $ff = "Unfulfilled";
+        $ff = "Open";
         if(!empty($this->request->params['args']))
         {
             if(isset($this->request->params['args']['client']))
@@ -37,7 +37,7 @@ class JobsController extends Controller{
             if(isset($this->request->params['args']['fulfilled']))
             {
                 $fulfilled = $this->request->params['args']['fulfilled'];
-                $ff = "Fulfilled";
+                $ff = "Finalised";
             }
             if(isset($this->request->params['args']['state']))
             {
