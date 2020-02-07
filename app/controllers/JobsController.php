@@ -48,7 +48,7 @@ class JobsController extends Controller{
         $jobs = $this->job->getAllJobs($client_id, $courier_id, $fulfilled, 0, $state);
         //render the page
         Config::setJsConfig('curPage', "view-jobs");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/orders/", Config::get('VIEWS_PATH') . 'orders/viewOrders.php', [
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/jobs/", Config::get('VIEWS_PATH') . 'jobs/viewJobs.php', [
             'page_title'    =>  $page_title,
             'client_name'   =>  $client_name,
             'client_id'     =>  $client_id,
