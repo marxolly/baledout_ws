@@ -44,17 +44,16 @@ class JobsController extends Controller{
                 $state = $this->request->params['args']['state'];
             }
         }
-        $page_title = "$ff Orders For $client_name";
-        //$orders = $this->order->getUnfulfilledOrders($client_id, $courier_id, 0);     getAllOrders($client_id, $courier_id = -1, $fulfilled = 0, $store_order = -1)
-        $orders = $this->order->getAllOrders($client_id, $courier_id, $fulfilled, 0, $state);
+        $page_title = "$ff Jobs For $client_name";
+        $jobs = $this->job->getAllJobs($client_id, $courier_id, $fulfilled, 0, $state);
         //render the page
-        Config::setJsConfig('curPage', "view-orders");
+        Config::setJsConfig('curPage', "view-jobs");
         $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/orders/", Config::get('VIEWS_PATH') . 'orders/viewOrders.php', [
             'page_title'    =>  $page_title,
             'client_name'   =>  $client_name,
             'client_id'     =>  $client_id,
             'courier_id'    =>  $courier_id,
-            'orders'        =>  $orders,
+            'jobs'          =>  $jobs,
             'fulfilled'     =>  $fulfilled,
             'state'         =>  $state
         ]);
