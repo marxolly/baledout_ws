@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="errorbox">
-                    <h2><i class="fas fa-exclamation-triangle"></i> No Orders Listed</h2>
+                    <h2><i class="fas fa-exclamation-triangle"></i> No Jobs Listed</h2>
                     <p>Either all Jobs are complete or you need to remove some filters</p>
                 </div>
             </div>
