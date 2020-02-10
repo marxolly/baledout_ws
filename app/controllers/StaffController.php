@@ -20,7 +20,7 @@ class staffController extends Controller
         Config::setJsConfig('curPage', "view-staff");
         $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/staff/", Config::get('VIEWS_PATH') . 'staff/viewStaff.php',
         [
-            'page_title'    =>  'Manage Staff Records'
+            'page_title'    =>  'Manage Staff'
         ]);
     }
 
