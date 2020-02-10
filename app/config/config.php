@@ -138,12 +138,12 @@ return array(
 		'reports'			=> array(
 		),
         'staff'             => array(
+            'view-staff'    => true
         ),
         'data-entry'    =>  array(
         ),
 		'site-settings'		=> array(
             'job-status'				=> 	true, 
-            'staff'                     =>  true,
             'manage-users'	            =>	true,
             'user-roles'                =>  true,
             'couriers'                  => true,
