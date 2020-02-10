@@ -66,16 +66,6 @@ class sitesettingsController extends Controller
         ]);
     }
 
-    public function staff()
-    {
-        //render the page
-        Config::setJsConfig('curPage', "staff");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'sitesettings/staff.php',
-        [
-            'page_title'    =>  'Manage Staff Records'
-        ]);
-    }
-
     public function stockMovementReasons()
     {
         //render the page
