@@ -16,7 +16,12 @@ class staffController extends Controller
 
     public function viewStaff()
     {
-        die('viewing staff');
+        //render the page
+        Config::setJsConfig('curPage', "view-staff");
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/staff/", Config::get('VIEWS_PATH') . 'staff/viewStaff.php',
+        [
+            'page_title'    =>  'Manage Staff Records'
+        ]);
     }
 
     public function isAuthorized(){
