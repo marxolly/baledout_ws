@@ -21,6 +21,6 @@
         "xeroapi/xero-php-oauth2": "*"
     },
     "autoload": {
-    	"psr-4": { "": ["app/core/", "app/models/", "app/utility/","app/controllers/", "app/core/components/"], "XeroPHP\\": "src/XeroPHP/"  }
+    	"psr-4": { "": ["app/core/", "app/models/", "app/utility/","app/controllers/", "app/core/components/"], "XeroAPI\\XeroPHP\\" : "lib/"  }
     }
 }

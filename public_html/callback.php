@@ -8,7 +8,7 @@ ini_set('display_errors', 'On');
 
     $provider = new \League\OAuth2\Client\Provider\GenericProvider([
         'clientId'                => '62609541B59A46CAB4AC6F374ED3B0F3',
-        'clientSecret'            => 'jTC0-mkwtMog5D33oKuC2dYCx3hcVFVLW9mgB3ik4j7IwiSU',
+        'clientSecret'            => '4-jtbm47vaG4BmDt5oTfg4V-_z2XLN0N_gLOVldpuDQInoBR',
         'redirectUri'             => 'https://portal.baledout.com.au/callback.php',
         'urlAuthorize'            => 'https://login.xero.com/identity/connect/authorize',
         'urlAccessToken'          => 'https://identity.xero.com/connect/token',
