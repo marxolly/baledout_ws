@@ -18,9 +18,10 @@ if (!isset($_GET['code'])) {
         'scope' => 'openid email profile accounting.settings accounting.transactions'
     ]);
 
-    echo "<pre>",print_r($_SESSION),"</pre>"; die();
+
 
     $_SESSION['oauth2state'] = $provider->getState();
+    echo "<pre>",print_r($_SESSION),"</pre>"; die(); 
     header('Location: ' . $authUrl);
     exit;
 
