@@ -57,6 +57,7 @@ ini_set('display_errors', 'On');
 
         } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
             echo "Callback failed";
+            print_r($e);
             exit();
         }
     }
