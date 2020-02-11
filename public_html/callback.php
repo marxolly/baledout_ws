@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 'On');
-    require __DIR__ . '../vendor/autoload.php';
+    require __DIR__ . '/../vendor/autoload.php';
     require_once('storage.php');
 
     // Storage Classe uses sessions for storing token > extend to your DB of choice
