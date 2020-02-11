@@ -7,7 +7,7 @@ session_start();
 
 $provider = new Xero([
     'clientId' => '62609541B59A46CAB4AC6F374ED3B0F3',
-    'clientSecret' => 'mkwtMog5D33oKuC2dYCx3hcVFVLW9mgB3ik4j7IwiSU',
+    'clientSecret' => 'jTC0-mkwtMog5D33oKuC2dYCx3hcVFVLW9mgB3ik4j7IwiSU',
     'redirectUri' => 'https://portal.baledout.com.au/calcinai_demo.php',
 ]);
 
