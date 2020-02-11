@@ -1,5 +1,5 @@
 <?php
-//use Calcinai\OAuth2\Client\Provider\Xero;
+use Calcinai\OAuth2\Client\Provider\Xero;
 
 include __DIR__ . '/../vendor/autoload.php';
 
