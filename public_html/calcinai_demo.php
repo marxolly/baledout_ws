@@ -21,7 +21,7 @@ if (!isset($_GET['code'])) {
 
 
     $_SESSION['oauth2state'] = $provider->getState();
-    echo "<pre>",print_r($_SESSION),"</pre>"; die(); 
+    echo $authUrl,"<pre>",print_r($_SESSION),"</pre>"; die(); 
     header('Location: ' . $authUrl);
     exit;
 
