@@ -5,15 +5,13 @@ include __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
+$provider = new Xero([
+    'clientId' => '62609541B59A46CAB4AC6F374ED3B0F3',
+    'clientSecret' => '4-jtbm47vaG4BmDt5oTfg4V-_z2XLN0N_gLOVldpuDQInoBR',
+    'redirectUri' => 'https://portal.baledout.com.au/calcinai_demo.php',
+]);
 
-$provider = new \League\OAuth2\Client\Provider\GenericProvider([
-        'clientId'                => '62609541B59A46CAB4AC6F374ED3B0F3',
-        'clientSecret'            => '4-jtbm47vaG4BmDt5oTfg4V-_z2XLN0N_gLOVldpuDQInoBR',
-        'redirectUri'             => 'https://portal.baledout.com.au/calcinai_demo.php',
-        'urlAuthorize'            => 'https://login.xero.com/identity/connect/authorize',
-        'urlAccessToken'          => 'https://identity.xero.com/connect/token',
-        'urlResourceOwnerDetails' => 'https://api.xero.com/api.xro/2.0/Organisation'
-    ]);
+
 
 if (!isset($_GET['code'])) {
     // If we don't have an authorization code then get one
