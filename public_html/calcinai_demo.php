@@ -15,13 +15,13 @@ if (!isset($_GET['code'])) {
 
     // If we don't have an authorization code then get one
     $authUrl = $provider->getAuthorizationUrl([
-        'scope' => 'openid email profile accounting.settings accounting.transactions'
+        'scope' => ['openid email profile accounting.settings accounting.transactions']
     ]);
 
 
 
     $_SESSION['oauth2state'] = $provider->getState();
-    echo $authUrl,"<pre>",print_r($_SESSION),"</pre>"; die(); 
+   // echo $authUrl,"<pre>",print_r($_SESSION),"</pre>"; die();
     header('Location: ' . $authUrl);
     exit;
 
