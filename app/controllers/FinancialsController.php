@@ -7,7 +7,7 @@
  * @author     Mark Solly <mark@baledout.com.au>
  */
 
-class FinacialsController extends Controller
+class FinancialsController extends Controller
 {
     public function xeroInfo()
     {
