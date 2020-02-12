@@ -43,11 +43,11 @@ if (!isset($_GET['code'])) {
 
     //If you added the openid/profile scopes you can access the authorizing user's identity.
     $identity = $provider->getResourceOwner($token);
-    print_r($identity);
+    echo "IDENTITY<pre>",print_r($identity),"</pre>";
 
     //Get the tenants that this user is authorized to access
     $tenants = $provider->getTenants($token);
-    print_r($tenants);
+    echo "TENANTS<pre>",print_r($tenants)"</pre>";
 }
 
 //The above is only required for the authorization process
@@ -61,7 +61,7 @@ $application = new \XeroPHP\Application(
 );
 
 $org = $application->load(\XeroPHP\Models\Accounting\Organisation::class)->execute();
-print_r($org);
+echo "ORG<pre>",print_r($org)"</pre>";
 
 
 //$provider->disconnect($token, $tenants[0]->id);
