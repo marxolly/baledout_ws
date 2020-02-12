@@ -46,6 +46,7 @@ class Authorization{
             $this->token_details['tenant_id']
         );
         $this->org = $this->xero_app->load(\XeroPHP\Models\Accounting\Organisation::class)->execute();
+        
     }
 
     private function tokenExpired()
