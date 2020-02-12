@@ -80,8 +80,9 @@ return array(
     /*************************************************************************
     * XERO API constants
     **************************************************************************/
-    'XEROCONSUMERKEY'     => 'OUWBI1XCHJU9RHOJXTIBYFHNGHMV1R',
-    'XEROCONSUMERSECRET'  => 'NBFMLJLWPHWIRAUJL0CDCYL5KA2VE4',
+    'XEROCLIENTID'      => '62609541B59A46CAB4AC6F374ED3B0F3',
+    'XEROCLIENTSECRET'  => '4-jtbm47vaG4BmDt5oTfg4V-_z2XLN0N_gLOVldpuDQInoBR',
+    'XEROREDIRECTURL'   => 'https://portal.baledout.com.au/calcinai_demo.php',
     /*************************************************************************
     * Baledout Address
     **************************************************************************/
@@ -143,7 +144,7 @@ return array(
         'data-entry'    =>  array(
         ),
 		'site-settings'		=> array(
-            'job-status'				=> 	true, 
+            'job-status'				=> 	true,
             'manage-users'	            =>	true,
             'user-roles'                =>  true,
             'couriers'                  => true,

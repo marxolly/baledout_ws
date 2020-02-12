@@ -51,7 +51,7 @@ if (!isset($_GET['code'])) {
 
     echo "<p>TOKEN: ".$token->getToken()."</p>";
     echo "<p>EXPIRES: ".$token->getExpires()."</p>";
-    echo "<p>NOW: ".time()."</p>"; 
+    echo "<p>NOW: ".time()."</p>";
     echo "<p>REFRESH TOKEN: ".$token->getRefreshToken()."</p>";
     echo "<p>ID TOKEN: ".$token->getValues()["id_token"] ."</p>";
     echo "<p>TENANT ID: ".$tenants[0]->tenantId ."</p>";

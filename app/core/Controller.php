@@ -41,6 +41,13 @@ class Controller {
     public $redirector;
 
     /**
+     * authorize for xero
+     *
+     * @var Authorization
+     */
+    public $authorization;
+
+    /**
      * loaded components
      *
      * @var array
@@ -62,6 +69,7 @@ class Controller {
         $this->response            =  $response !== null ? $response : new Response();
         $this->view                =  new View($this);
         $this->redirector          =  new Redirector();
+        $this->authorization       =  new Authorization();
     }
 
     /**
@@ -92,7 +100,7 @@ class Controller {
      *
      */
      public function initialize(){
-        
+
          $this->loadComponents([
              'Auth' => [
                      'authenticate' => ['User'],
