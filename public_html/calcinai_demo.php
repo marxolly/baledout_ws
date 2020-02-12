@@ -48,6 +48,11 @@ if (!isset($_GET['code'])) {
     //Get the tenants that this user is authorized to access
     $tenants = $provider->getTenants($token);
     echo "TENANTS<pre>",print_r($tenants),"</pre>";
+
+    echo "<p>TOKEN: ".$token->getToken()."</p>";
+    echo "<p>REFRESH TOKEN: ".$token->getRefreshToken()."</p>";
+    echo "<p>ID TOKEN: ".$token->getValues()["id_token"] ."</p>";
+    echo "<p>TENANT ID: ".$tenants[0]->getTenantId() ."</p>";
 }
 
 //The above is only required for the authorization process
