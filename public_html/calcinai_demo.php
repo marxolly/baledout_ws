@@ -47,7 +47,7 @@ if (!isset($_GET['code'])) {
 
     //Get the tenants that this user is authorized to access
     $tenants = $provider->getTenants($token);
-    echo "TENANTS<pre>",print_r($tenants)"</pre>";
+    echo "TENANTS<pre>",print_r($tenants),"</pre>";
 }
 
 //The above is only required for the authorization process
@@ -61,7 +61,7 @@ $application = new \XeroPHP\Application(
 );
 
 $org = $application->load(\XeroPHP\Models\Accounting\Organisation::class)->execute();
-echo "ORG<pre>",print_r($org)"</pre>";
+echo "ORG<pre>",print_r($org),"</pre>";
 
 
 //$provider->disconnect($token, $tenants[0]->id);
