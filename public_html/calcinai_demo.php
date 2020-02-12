@@ -50,9 +50,11 @@ if (!isset($_GET['code'])) {
     echo "TENANTS<pre>",print_r($tenants),"</pre>";
 
     echo "<p>TOKEN: ".$token->getToken()."</p>";
+    echo "<p>EXPIRES: ".$token->getExpires()."</p>";
     echo "<p>REFRESH TOKEN: ".$token->getRefreshToken()."</p>";
     echo "<p>ID TOKEN: ".$token->getValues()["id_token"] ."</p>";
     echo "<p>TENANT ID: ".$tenants[0]->tenantId ."</p>";
+
 }
 
 //The above is only required for the authorization process
