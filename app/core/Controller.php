@@ -69,7 +69,7 @@ class Controller {
         $this->response            =  $response !== null ? $response : new Response();
         $this->view                =  new View($this);
         $this->redirector          =  new Redirector();
-        $this->authorization       =  new Authorization();
+        $this->xero_auth           =  new Xeroauth();
     }
 
     /**

@@ -7,7 +7,7 @@
  */
 use Calcinai\OAuth2\Client\Provider\Xero;
 
-class Authorization{
+class Xeroauth{
 
     public $provider;
     public $token_details;
@@ -46,7 +46,7 @@ class Authorization{
             $this->token_details['tenant_id']
         );
         $this->org = $this->xero_app->load(\XeroPHP\Models\Accounting\Organisation::class)->execute();
-        
+
     }
 
     private function tokenExpired()
