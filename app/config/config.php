@@ -151,6 +151,7 @@ return array(
             'edit-user-profile'         => false
 		),
         'financials'    =>  array(
+            'xero-info' => true
         ),
         'admin-only'    => array(
         ),
