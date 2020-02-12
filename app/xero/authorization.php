@@ -18,7 +18,7 @@ class Authorization{
 
 
     /* Class constructor */
-    private function __construct(){
+    public function __construct(){
         $db = Database::openConnection();
         $this->provider = new Xero([
             'clientId'      => Config::get('XEROCLIENTID'),
