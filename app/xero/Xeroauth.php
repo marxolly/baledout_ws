@@ -29,7 +29,7 @@ class Xeroauth{
         if($this->tokenExpired())
         {
             //Gotta get a new one
-            $newAccessToken = $provider->getAccessToken('refresh_token', [
+            $newAccessToken = $this->provider->getAccessToken('refresh_token', [
                 'refresh_token' => $this->token_details['refresh_token']
             ]);
             // Save my new token, expiration and refresh token
