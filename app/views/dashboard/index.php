@@ -73,6 +73,7 @@ $c = 1;
                 </tbody>
             </table>
         </div>
+        <?php echo "ORG<pre>",print_r($this->controller-xero_auth->org),"</pre>"; ?>
     <?php else:?>
         <div class="row">
             <div class="col-lg-12">
