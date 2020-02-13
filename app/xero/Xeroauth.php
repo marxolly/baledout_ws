@@ -20,12 +20,16 @@ class Xeroauth{
     /* Class constructor */
     public function __construct(){
         $db = Database::openConnection();
-        die("client id: ".Config::get('XEROREDIRECTURL'));
-        $this->provider = new Xero([
-            'clientId'      => Config::get('XEROCLIENTID'),
-            'clientSecret'  => Config::get('XEROCLIENTSECRET'),
-            'redirectUri'   => Config::get('XEROREDIRECTURL'),
-        ]);
+        try{
+             $this->provider = new Xero([
+                'clientId'      => Config::get('XEROCLIENTID'),
+                'clientSecret'  => Config::get('XEROCLIENTSECRET'),
+                'redirectUri'   => Config::get('XEROREDIRECTURL'),
+            ]);
+        } catch (UnauthorizedException($e)){
+           var dump($e);
+        });
+
         $this->token_details = $db->queryByID($this->table, 1);
         if($this->tokenExpired())
         {
