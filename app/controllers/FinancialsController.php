@@ -9,6 +9,11 @@
 
 class FinancialsController extends Controller
 {
+    public function beforeAction()
+    {
+        parent::beforeAction();
+    }
+    
     public function xeroInfo()
     {
         $org = $this->xero_auth->$org;
