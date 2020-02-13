@@ -6,7 +6,12 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Invoices</h2>
-            <?php echo "<pre>",print_r($invoices),"</pre>";?>
+            <?php
+            foreach($invoices as $i)
+            {
+                echo "<p>".$i->contact->getName()."</p>";
+            }
+            ?>
             <h2>Contacts</h2>
             <?php
             foreach($contacts as $contact)
