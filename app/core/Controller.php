@@ -43,9 +43,9 @@ class Controller {
     /**
      * authorize for xero
      *
-     * @var Authorization
+     * @var xero_auth
      */
-    public $authorization;
+    public $xero_auth;
 
     /**
      * loaded components
