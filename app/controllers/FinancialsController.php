@@ -18,11 +18,13 @@ class FinancialsController extends Controller
     {
         $org = $this->xero_auth->getOrganisation();
         $contacts = $this->xero_auth->getContacts();
+        $invoices = $this->xero_auth->getInvoices();
 
         Config::setJsConfig('curPage', "xero-info");
         $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/financials/", Config::get('VIEWS_PATH') . 'financials/xero-info.php',[
             'org'           => $org,
             'contacts'      => $contacts,
+            'invoices'      => $invoices,
             'page_title'    => 'Xero Info'
         ]);
     }
