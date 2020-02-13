@@ -30,7 +30,7 @@ class Xeroauth{
            var_dump($e);
         };
         $this->token_details = $db->queryByID($this->table, 1);
-        die('refresh token: '.$this->token_details['refresh_token']);
+        die('refresh token: '.$this->token_details['expires']);
         if($this->tokenExpired())
         {
             //Gotta get a new one
