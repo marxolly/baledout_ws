@@ -29,7 +29,7 @@ class Xeroauth{
         } catch (ForbiddenException $e){
            var_dump($e);
         };
-        die('refresh token: '.$this->token_details['refresh_token']);
+        //die('refresh token: '.$this->token_details['refresh_token']);
         $this->token_details = $db->queryByID($this->table, 1);
         if($this->tokenExpired())
         {
@@ -44,6 +44,7 @@ class Xeroauth{
                 'refresh_token' => $newAccessToken->getRefreshToken(),
                 'expires'       => $newAccessToken->getExpires()
             ), 1);
+            //update details with new token
             $this->token_details = $db->queryByID($this->table, 1);
         }
 
