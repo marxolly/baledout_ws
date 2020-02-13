@@ -29,7 +29,7 @@ class Xeroauth{
         } catch (ForbiddenException $e){
            var_dump($e);
         };
-
+        die('error not caught');
         $this->token_details = $db->queryByID($this->table, 1);
         if($this->tokenExpired())
         {
