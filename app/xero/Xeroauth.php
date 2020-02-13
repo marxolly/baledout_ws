@@ -28,7 +28,7 @@ class Xeroauth{
             ]);
         } catch (UnauthorizedException $e){
            var_dump($e);
-        });
+        };
 
         $this->token_details = $db->queryByID($this->table, 1);
         if($this->tokenExpired())
