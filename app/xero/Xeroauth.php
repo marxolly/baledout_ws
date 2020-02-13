@@ -26,7 +26,7 @@ class Xeroauth{
                 'clientSecret'  => Config::get('XEROCLIENTSECRET'),
                 'redirectUri'   => Config::get('XEROREDIRECTURL'),
             ]);
-        } catch (UnauthorizedException $e){
+        } catch (ForbiddenException $e){
            var_dump($e);
         };
 
