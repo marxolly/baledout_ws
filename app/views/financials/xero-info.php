@@ -10,7 +10,7 @@
             foreach($invoices as $i)
             {
                 $contact = $i->getContact();
-                echo "<p>".$contact->getName()." - ".$i->getAmountDue."</p>";
+                echo "<p>".$contact->getName()." - ".$i->total."</p>";
             }
             ?>
             <h2>Contacts</h2>
