@@ -10,7 +10,7 @@
             foreach($invoices as $i)
             {
                 $contact = $i->getContact();
-                $owing = "$".number_format($i->AmountDue, 2,'.', ',')
+                $owing = "$".number_format($i->AmountDue, 2,'.', ',');
                 echo "<p>".$contact->getName()." - ".$owing."</p>";
             }
             ?>
