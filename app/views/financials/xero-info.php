@@ -9,7 +9,8 @@
             <?php
             foreach($invoices as $i)
             {
-                echo "<p>".$i->contact->getName()."</p>";
+                $contact = $i->getContact();
+                echo "<p>".$contact->getName()." - ".$i->getAmountDue."</p>";
             }
             ?>
             <h2>Contacts</h2>
