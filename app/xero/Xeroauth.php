@@ -27,7 +27,7 @@ class Xeroauth{
                 'redirectUri'   => Config::get('XEROREDIRECTURL'),
             ]);
         } catch (UnauthorizedException $e){
-           var dump($e);
+           var_dump($e);
         });
 
         $this->token_details = $db->queryByID($this->table, 1);
