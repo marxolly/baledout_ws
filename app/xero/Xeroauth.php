@@ -60,7 +60,7 @@ class Xeroauth{
 
     public function getContacts()
     {
-        return $this->xero_app->load(\XeroPHP\Models\Accounting\Contact::class)->execute();
+        return $this->xero_app->load(\XeroPHP\Models\Accounting\Contact::class)->orderBy('name', 'asc')->execute();
     }
 
     private function tokenExpired()
