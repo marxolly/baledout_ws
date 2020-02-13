@@ -58,7 +58,7 @@ class Xeroauth{
 
     private function tokenExpired()
     {
-        die( time()." < ".$this->token_details['expires'])
+        die( time()." < ".$this->token_details['expires']);
         return(time() < $this->token_details['expires']);
     }
 }
