@@ -34,7 +34,7 @@ class Xeroauth{
         if($this->tokenExpired())
         {
             //Gotta get a new one
-            die('expired token');
+            //die('expired token');
             $newAccessToken = $this->provider->getAccessToken('refresh_token', [
                 'refresh_token' => $this->token_details['refresh_token']
             ]);
