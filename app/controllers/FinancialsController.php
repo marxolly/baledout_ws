@@ -16,7 +16,7 @@ class FinancialsController extends Controller
 
     public function xeroInfo()
     {
-        $org = $this->xero_auth->org;
+        $org = $this->xero_auth->getOrganisation();
 
         Config::setJsConfig('curPage', "xero-info");
         $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/financials/", Config::get('VIEWS_PATH') . 'financials/xero-info.php',[
