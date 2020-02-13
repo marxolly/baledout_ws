@@ -9,9 +9,10 @@
             foreach($contacts as $contact)
             {
                 //do something here
-
+                $name = $contact->getName()." (".$contact->getFirstName()." ".$contact->getLastName().")";
+                echo "<p>$name</p>";
                 //this will give you the raw data without the object structure
-                echo "<pre>",print_r($contact->toStringArray()),"</pre>";
+                //echo "<pre>",print_r($contact->toStringArray()),"</pre>";
             }
 
             ?>
