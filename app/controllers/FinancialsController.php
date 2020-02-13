@@ -22,7 +22,7 @@ class FinancialsController extends Controller
         Config::setJsConfig('curPage', "xero-info");
         $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/financials/", Config::get('VIEWS_PATH') . 'financials/xero-info.php',[
             'org'           => $org,
-            'contacts'      => $contacts
+            'contacts'      => $contacts,
             'page_title'    => 'Xero Info'
         ]);
     }
