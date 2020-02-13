@@ -13,10 +13,10 @@ class FinancialsController extends Controller
     {
         parent::beforeAction();
     }
-    
+
     public function xeroInfo()
     {
-        $org = $this->xero_auth->$org;
+        $org = $this->xero_auth->$token_details;
 
         Config::setJsConfig('curPage', "xero-info");
         $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/financials/", Config::get('VIEWS_PATH') . 'financials/xero-info.php',[

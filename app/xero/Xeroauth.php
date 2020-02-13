@@ -53,7 +53,7 @@ class Xeroauth{
             $this->token_details['tenant_id']
         );
         $this->org = $this->xero_app->load(\XeroPHP\Models\Accounting\Organisation::class)->execute();
-        echo "ORG<pre>",print_r($this->org),"</pre>"; die();
+        //echo "ORG<pre>",print_r($this->org),"</pre>"; die();
     }
 
     private function tokenExpired()
