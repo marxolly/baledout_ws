@@ -5,7 +5,9 @@
     <?php include(Config::get('VIEWS_PATH')."layout/page-includes/page_top.php");?>
     <div class="row">
         <div class="col-md-12">
-            <h1>Contacts</h1>
+            <h2>Invoices</h2>
+            <?php echo "<pre>",print_r($invoices),"</pre>";?>
+            <h2>Contacts</h2>
             <?php
             foreach($contacts as $contact)
             {
@@ -16,7 +18,6 @@
                 //this will give you the raw data without the object structure
                 //echo "<pre>",print_r($contact->toStringArray()),"</pre>";
             }
-
             ?>
         </div>
     </div>
