@@ -20,6 +20,7 @@ class Xeroauth{
     /* Class constructor */
     public function __construct(){
         $db = Database::openConnection();
+        die("client id: ".Config::get('XEROCLIENTID'));
         $this->provider = new Xero([
             'clientId'      => Config::get('XEROCLIENTID'),
             'clientSecret'  => Config::get('XEROCLIENTSECRET'),
