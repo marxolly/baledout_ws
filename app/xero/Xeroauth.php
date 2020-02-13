@@ -58,6 +58,11 @@ class Xeroauth{
         return $this->xero_app->load(\XeroPHP\Models\Accounting\Organisation::class)->execute();
     }
 
+    public function getContacts()
+    {
+        return $this->xero_app->load(\XeroPHP\Models\Accounting\Contacts::class)->execute();
+    }
+
     private function tokenExpired()
     {
         //die( time()." < ".$this->token_details['expires']);
