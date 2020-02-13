@@ -66,7 +66,7 @@ class Xeroauth{
     public function getInvoices($page = 1)
     {
         $startDateString = date('Y, m, d');
-        $endDateString = date('Y, m, d', strtotime('-2 days'));
+        $endDateString = date('Y, m, d', strtotime('-21 days'));
 
         $invoices = $this->xero_app->load('Accounting\\Invoice')
             ->orderBy("Date", "DESC")
