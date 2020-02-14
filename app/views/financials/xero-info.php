@@ -25,8 +25,6 @@
                         <th>Company</th>
                         <th>Contact</th>
                         <th>Phone</th>
-                        <th>Amount Paid</th>
-                        <th>Date Paid</th>
                         <th>Outstanding</th>
                     </tr>
                 </thead>
@@ -43,9 +41,7 @@
                             <td><?php echo $contact->getName();?></td>
                             <td><?php echo $person;?></td>
                             <td><?php echo $contact->getEmailAddress();?></td>
-                            <td></td>
-                            <td></td>
-                            <td><?php echo $owing;?></td>
+                            <td class="number"><?php echo $owing;?></td>
                         </tr>
                     <?php endforeach;?>
                 </tbody>
