@@ -20,12 +20,13 @@
             <table class="table-striped table-hover view-users" id="invoices_table" width="100%">
                 <thead>
                     <tr>
+                        <th></th>
                         <th>Date</th>
                         <th>Invoice Number</th>
                         <th>Company</th>
                         <th>Contact</th>
                         <th>Phone</th>
-                        <th>Outstanding</th>
+                        <th>Still Owing</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,30 +37,22 @@
                         $owing = "$".number_format($invoice->AmountDue, 2,'.', ',');
                         ?>
                         <tr>
-                            <td><?php echo $date->format('d-m-Y');?></td>
+                            <td class="number"><?php echo $c;?></td>
+                            <td class="number"><?php echo $date->format('d-m-Y');?></td>
                             <td><?php echo $invoice->InvoiceNumber;?></td>
                             <td><?php echo $contact->getName();?></td>
                             <td><?php echo $person;?></td>
                             <td><?php echo $contact->getEmailAddress();?></td>
                             <td class="number"><?php echo $owing;?></td>
                         </tr>
-                    <?php endforeach;?>
+                    <?php ++$c;
+                    endforeach;?>
                 </tbody>
             </table>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-
-
-            <?php
-            foreach($invoices as $i)
-            {
-                $contact = $i->getContact();
-                $owing = "$".number_format($i->AmountDue, 2,'.', ',');
-                echo "<p>".$contact->getName()." - ".$owing."</p>";
-            }
-            ?>
             <h2>Contacts</h2>
             <?php
             foreach($contacts as $contact)
