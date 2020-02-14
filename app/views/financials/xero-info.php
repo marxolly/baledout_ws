@@ -5,9 +5,10 @@
     <?php include(Config::get('VIEWS_PATH')."layout/page-includes/page_top.php");?>
     <div class="row">
         <div class="col-md-12">
-           <h2>Invoices</h2>
+           <h2>Outstanding Invoices</h2>
         </div>
     </div>
+    <?php if(count($invoices)):?>
     <div id="waiting" class="row">
         <div class="col-lg-12 text-center">
             <h2>Drawing Table..</h2>
@@ -51,6 +52,16 @@
             </table>
         </div>
     </div>
+    <?php else:?>
+        <div class="row">
+            <div class="col-md-12">
+                <div class='feedbackbox'>
+                    <h3>No invoices Listed</h3>
+                    <p>All invoices for the past 28 days are currently marked as paid</p>
+                </div>
+            </div>
+        </div>
+    <?php endif;?>
     <div class="row">
         <div class="col-md-12">
             <h2>Contacts</h2>
