@@ -31,12 +31,12 @@
                 </thead>
                 <tbody>
                     <?php foreach($invoices as $invoice):
-                        $contact = $i->getContact();
-                        $date = $i->DateString;
+                        $contact = $invoice->getContact();
+                        $date = $invoice->DateString;
                         ?>
                         <tr>
                             <td><?php echo $date;?></td>
-                            <td><?php echo $iinvoice->InvoiceNumber;?></td>
+                            <td><?php echo $invoice->InvoiceNumber;?></td>
                             <td></td>
                             <td></td>
                             <td></td>
