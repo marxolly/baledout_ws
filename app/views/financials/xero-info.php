@@ -41,7 +41,7 @@
                             <td><?php echo $invoice->InvoiceNumber;?></td>
                             <td><?php echo $contact->getName();?></td>
                             <td><?php echo $person;?></td>
-                            <td></td>
+                            <td><?php echo $contact->Phones->DEFAULT;?></td>
                             <td></td>
                             <td></td>
                             <td></td>
