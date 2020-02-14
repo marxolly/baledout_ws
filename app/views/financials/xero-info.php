@@ -33,13 +33,14 @@
                 <tbody>
                     <?php foreach($invoices as $invoice):
                         $contact = $invoice->getContact();
+                        $person = $contact->getFirstName()." ".$contact->getLastName()
                         $date = $invoice->Date;
                         ?>
                         <tr>
                             <td><?php echo $date->format('d-m-Y');?></td>
                             <td><?php echo $invoice->InvoiceNumber;?></td>
                             <td><?php echo $contact->getName();?></td>
-                            <td></td>
+                            <td><?php echo $person;?></td>
                             <td></td>
                             <td></td>
                             <td></td>
