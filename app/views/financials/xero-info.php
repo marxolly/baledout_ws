@@ -32,7 +32,7 @@
                 <tbody>
                     <?php foreach($invoices as $invoice):
                         $contact = $invoice->getContact();
-                        $date = $invoice->DateString;
+                        $date = $invoice->Date;
                         ?>
                         <tr>
                             <td><?php echo $date;?></td>
