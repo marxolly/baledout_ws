@@ -14,6 +14,7 @@
             <p>May take a few moments</p>
             <img class='loading' src='/images/preloader.gif' alt='loading...' />
         </div>
+    </div>
     <div class="row" id="table_holder" style="display:none">
         <div class="col-md-12">
             <table class="table-striped table-hover view-users" id="invoices_table" width="100%">
