@@ -57,7 +57,7 @@
             <div class="col-md-12">
                 <div class='feedbackbox'>
                     <h3>No invoices Listed</h3>
-                    <p>All invoices for the past 28 days are currently marked as paid</p>
+                    <p>Either no invoices have been entered in the last 28 days or they are all marked as paid.</p>
                 </div>
             </div>
         </div>
