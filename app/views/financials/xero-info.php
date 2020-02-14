@@ -35,6 +35,7 @@
                         $contact = $invoice->getContact();
                         $person = $contact->getFirstName()." ".$contact->getLastName();
                         $date = $invoice->Date;
+                        $owing = "$".number_format($i->AmountDue, 2,'.', ',');
                         ?>
                         <tr>
                             <td><?php echo $date->format('d-m-Y');?></td>
@@ -44,7 +45,7 @@
                             <td><?php echo $contact->getEmailAddress();?></td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td><?php echo $owing;?></td>
                         </tr>
                     <?php endforeach;?>
                 </tbody>
