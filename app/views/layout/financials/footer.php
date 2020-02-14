@@ -12,7 +12,9 @@
                 },
                 'xero-info':{
                     init: function(){
-                        
+                        dataTable.init($('table#invoices_table'), {
+                            "ordering": false
+                        } );
                     }
                 }
             }
