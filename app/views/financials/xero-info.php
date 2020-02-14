@@ -35,7 +35,7 @@
                         $date = $invoice->Date;
                         ?>
                         <tr>
-                            <td><?php echo $date;?></td>
+                            <td><?php echo $date->format('d-m-Y H:i:s');?></td>
                             <td><?php echo $invoice->InvoiceNumber;?></td>
                             <td></td>
                             <td></td>
