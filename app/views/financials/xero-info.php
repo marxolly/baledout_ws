@@ -33,7 +33,7 @@
                 <tbody>
                     <?php foreach($invoices as $invoice):
                         $contact = $invoice->getContact();
-                        $person = $contact->getFirstName()." ".$contact->getLastName()
+                        $person = $contact->getFirstName()." ".$contact->getLastName();
                         $date = $invoice->Date;
                         ?>
                         <tr>
