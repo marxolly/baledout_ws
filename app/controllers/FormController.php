@@ -57,7 +57,7 @@ class FormController extends Controller {
 
     public function procJobStatusEdit()
     {
-        //echo "<pre>",print_r($this->request->data),"</pre>"; die();
+        echo "<pre>",print_r($this->request->data),"</pre>"; die();
         $db = Database::openConnection();
         $id = $this->request->data['line_id'];
         $name = $this->request->data['name_'.$id];
