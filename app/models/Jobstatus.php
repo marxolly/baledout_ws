@@ -54,9 +54,10 @@ class Jobstatus extends Model{
     public function editStatus($name, $id, $locked = false)
     {
         $db = Database::openConnection();
+        $l = ($locked)? 1: 0;
         $values = array(
             'name'      => $name,
-            'locked'    => $locked
+            'locked'    => $l
         );
         $db->updateDatabaseFields($this->table, $values, $id);
     }
