@@ -44,7 +44,14 @@
                                 <td><?php echo $this->controller->client->getClientName($user['client_id']);?></td>
                                 <td><?php echo $user['email'];?></td>
                                 <td><?php echo $last_log;?></td>
-                                <td></td>
+                                <td>
+                                    <?php if($user['active'] > 0):?>
+                                        <p><a class="btn btn-danger deactivate" data-userid="<?php echo $user['id'];?>">Deactivate User</a> </p>
+                                    <?php else:?>
+                                        <p><a class="btn btn-success reactivate" data-userid="<?php echo $user['id'];?>">Reactivate User</a> </p>
+                                    <?php endif;?>
+                                    <p><a class="btn btn-primary" href="/user/edit-user-profile/user=<?php echo $user['id'];?>">Edit Profile</a></p>
+                                </td>
                             </tr>
                             <?php endforeach;
                         endif;?>
