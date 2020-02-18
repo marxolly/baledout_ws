@@ -28,6 +28,11 @@
                         actions.common.init();
                     }
                 },
+                'job-importing' : {
+                    init: function(){
+                        actions.common.init();
+                    }
+                },
                 'add-job': {
                     init: function()
                     {
@@ -57,15 +62,15 @@
                 },
                 'job-search-results':{
                     init: function(){
-                        actions['order-search'].init();
+                        actions['job-search'].init();
                     }
                 },
-                'order-tracking' : {
+                'job-tracking' : {
                     init: function(){
 
                     }
                 },
-                'order-detail' : {
+                'job-detail' : {
                     init: function(){
                         $('button#print').click(function(e){
                         	$("div#print_this").printArea({

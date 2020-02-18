@@ -28,6 +28,20 @@ class JobsController extends Controller{
             ]);
     }
 
+    public function jobImporting()
+    {
+        $this->view->assign('page_title', "Job Importing");
+        Config::setJsConfig('curPage', "job-importing");
+        $coming_soon = $this->view->render(Config::get('VIEWS_PATH') . 'dashboard/comingsoon.php',[
+
+        ]);
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/jobs/", Config::get('VIEWS_PATH') . 'jobs/jobImporting.php',
+            [
+                'page_title'    => "Import Jobs",
+                'coming_soon'   => $coming_soon
+            ]);
+    }
+
     public function viewJobs()
     {
         //echo "<pre>",print_r($this->request->params['args']),"</pre>";die();
