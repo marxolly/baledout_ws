@@ -33,9 +33,13 @@ class ClientsController extends Controller
     {
         $this->view->assign('page_title', "Add Client");
         Config::setJsConfig('curPage', "add-client");
+        $coming_soon = $this->view->render(Config::get('VIEWS_PATH') . 'dashboard/comingsoon.php',[
+
+        ]);
         $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/clients/", Config::get('VIEWS_PATH') . 'clients/addClient.php',
             [
-                'page_title'    =>  "Add Client"
+                'page_title'    => "Add Client",
+                'coming_soon'   => $coming_soon
             ]);
     }
 
