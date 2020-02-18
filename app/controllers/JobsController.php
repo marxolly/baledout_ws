@@ -14,6 +14,20 @@ class JobsController extends Controller{
         $this->Security->config("form", [ 'fields' => ['csrf_token']]);
     }
 
+    public function addJob()
+    {
+        $this->view->assign('page_title', "Add Job");
+        Config::setJsConfig('curPage', "add-job");
+        $coming_soon = $this->view->render(Config::get('VIEWS_PATH') . 'dashboard/comingsoon.php',[
+
+        ]);
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/jobs/", Config::get('VIEWS_PATH') . 'jobs/addJob.php',
+            [
+                'page_title'    => "Add Job",
+                'coming_soon'   => $coming_soon
+            ]);
+    }
+
     public function viewJobs()
     {
         //echo "<pre>",print_r($this->request->params['args']),"</pre>";die();
