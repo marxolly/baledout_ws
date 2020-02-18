@@ -16,8 +16,9 @@
 
 
     <!-- Stylesheets -->
-        <link rel="stylesheet" href="/styles/bootstrap.min.css">
+        <!--link rel="stylesheet" href="/styles/bootstrap.min.css"-->
         <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.css">
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.18/css/dataTables.bootstrap.min.css" />
