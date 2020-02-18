@@ -291,11 +291,9 @@ Responsive Tables
         padding-right: 0;
         border-bottom:dotted 1px #f18f01;
         position: relative;
-        padding-left: 50%;
-        width: 50% !important;
+        padding-left: 39%;
         text-align: left !important;
         min-height: 30px;
-        vertical-align: middle;
     }
 
     table:not(.ui-datepicker-calendar) tr:not(.full_width) td:before {
@@ -304,7 +302,7 @@ Responsive Tables
         /* Top/left values mimic padding */
         top: 6px;
         left: 6px;
-        width: 45%;
+        width: 30%;
         white-space: nowrap;
         font-weight: bold;
         text-align: left;
