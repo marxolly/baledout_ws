@@ -6,9 +6,8 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js" ></script>
         <script src="/scripts/form_validators.js?t=<?php echo time();?>" ></script>
         <!-- Bootstrap JavaScript -->
-        <!--script src="/scripts/bootstrap.3.3.4.min.js"></script-->
+        <script src="/scripts/bootstrap.3.3.4.min.js"></script>
         <!--script src="/scripts/bootstrap.3.3.7.min.js"></script-->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!-- Bootstrap Select Styling >
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
