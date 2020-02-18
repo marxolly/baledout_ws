@@ -62,34 +62,50 @@ $c = 1;
         </div>
         <div class="row">
             <h2>Panels</h2>
-            <div class="panel panel-primary">
-                <div class="panel-heading">Primary Panel</div>
-                <div class="panel-body">
-                    Panel content
+        </div>
+        <div class="row">
+            <h3>Two Columns</h3>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Primary Panel</div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
                 </div>
             </div>
-            <div class="panel panel-success">
-                <div class="panel-heading">Success Panel</div>
-                <div class="panel-body">
-                    Panel content
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Success Panel</div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
                 </div>
             </div>
-            <div class="panel panel-info">
-                <div class="panel-heading">Info Panel</div>
-                <div class="panel-body">
-                    Panel content
+        </div>
+        <div class="row">
+            <h3>Three Columns</h3>
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Info Panel</div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
                 </div>
             </div>
-            <div class="panel panel-warning">
-                <div class="panel-heading">Warning Panel</div>
-                <div class="panel-body">
-                    Panel content
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">Warning Panel</div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
                 </div>
             </div>
-            <div class="panel panel-danger">
-                <div class="panel-heading">Danger Panel</div>
-                <div class="panel-body">
-                    Panel content
+            <div class="col-md-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Danger Panel</div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
                 </div>
             </div>
         </div>
