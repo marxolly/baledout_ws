@@ -16,7 +16,6 @@ class JobsController extends Controller{
 
     public function addJob()
     {
-        $this->view->assign('page_title', "Add Job");
         Config::setJsConfig('curPage', "add-job");
         $coming_soon = $this->view->render(Config::get('VIEWS_PATH') . 'dashboard/comingsoon.php',[
 
@@ -30,7 +29,6 @@ class JobsController extends Controller{
 
     public function jobSearch()
     {
-        $this->view->assign('page_title', "Job Search");
         Config::setJsConfig('curPage', "job-search");
         $coming_soon = $this->view->render(Config::get('VIEWS_PATH') . 'dashboard/comingsoon.php',[
 
@@ -44,7 +42,6 @@ class JobsController extends Controller{
 
     public function jobImporting()
     {
-        $this->view->assign('page_title', "Job Importing");
         Config::setJsConfig('curPage', "job-importing");
         $coming_soon = $this->view->render(Config::get('VIEWS_PATH') . 'dashboard/comingsoon.php',[
 
@@ -105,7 +102,7 @@ class JobsController extends Controller{
     public function isAuthorized(){
         $action = $this->request->param('action');
         $role = (Session::isAdminUser())? 'admin' : Session::getUserRole();
-        $resource = "orders";
+        $resource = "jobs";
         //only for admin
         Permission::allow('admin', $resource, "*");
         Permission::allow('super admin', $resource, "*");
