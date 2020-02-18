@@ -114,26 +114,26 @@ $c = 1;
             <table width="100%" class="table-striped table-hover" id="the_table" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Table Head</th>
-                        <th>Table Head</th>
+                        <th>Table Head 1</th>
+                        <th>Table Head 2</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td data-label="Table Head 1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td data-label="Table Head 2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
                     </tr>
                     <tr>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td data-label="Table Head 1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td data-label="Table Head 2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
                     </tr>
                     <tr>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td data-label="Table Head 1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td data-label="Table Head 2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
                     </tr>
                     <tr>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td data-label="Table Head 1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
+                        <td data-label="Table Head 2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales.</td>
                     </tr>
                 </tbody>
             </table>
