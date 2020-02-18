@@ -55,10 +55,20 @@ $c = 1;
             <button type="button" class="btn btn-info">Info</button>
             <button type="button" class="btn btn-light">Light</button>
             <button type="button" class="btn btn-dark">Dark</button>
-
             <button type="button" class="btn btn-link">Link</button>
         </div>
         <div class="row">
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="btn btn-outline-success">Success</button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-light">Light</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+        </div>
+        <div class="row">
+            <h2>Table</h2>
             <table width="100%" class="table-striped table-hover" id="the_table" style="width:100%">
                 <thead>
                     <tr>
