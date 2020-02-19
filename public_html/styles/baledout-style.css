@@ -37,6 +37,11 @@ h2,h3,h4,h5,h6{
     background-color: #fefefe;
 }
 
+.panel-heading{
+    font-weight: bold;
+    font-size: larger;
+}
+
 
 @media(min-width:768px) {
     #page-wrapper{
